@@ -1,0 +1,320 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  "http://www.w3.org/TR/html4/loose.dtd">  
+<html xmlns:fb="http://www.facebook.com/2008/fbml"><head>
+<title>VW TDI MAF information and FAQ</title>
+<meta name="description" content="VW MAF air flow sensor FAQ">
+<meta name="keywords" content="TDI MAF sensor, TDI maf sensor testing, bad maf tdi, vw maf sensor, vw tdi limp mode, tdi low power, 038906461C">
+<?php include("../../header.php"); ?>
+<?php include("../../menu.php"); ?>
+
+<h1> TDI engine TDI MAF/MAS (Mass air flow sensor) FAQ, for volkswagen TDI
+(diesel) 1996+</h1>
+<p><b><font size="4">Introduction</font></b></p>
+<h2>This article discusses the two types of MAF used on VW TDI and Audi TDI
+engines and what the
+car's computer does with the information from the MAF.</h2>
+<p> The mk3 uses a hot
+wire, the mk4, mk5, and mk6 VW and Audi&nbsp; use a thin film or hot film MAF.&nbsp;&nbsp;<br>
+Related links: <a href="../a4/MAF-sensor-testing-VW-cleaner.htm">1000q: mk4 MAF testing procedure</a>  , <a href="boost-leak-tester-DIY-check.htm">1000q:
+boost leak test</a>&nbsp;, <a href="limp-mode-TDI-fix.htm">1000q: solving limp mode
+for VW TDI</a> , <a href="low-power-fix-TDI.htm">1000q: constant low power or rev
+limit</a></p>
+<h3>Why does the car need a MAF?</h3>
+<p>Modern electronically fuel metered cars like the VW TDI all use a MAF.&nbsp;&nbsp;
+Using a MAF sensor is one way of directly measuring how much air is
+passing the MAF sensor and into the engine.&nbsp; Other cars may
+calculate air flow instead of measuring it  by using other air flow sensors and taking into
+account engine rpm, throttle position, and air temperature.&nbsp; Knowing how
+much air the engine is getting is important because the car's computer uses this
+value to know how much fuel to give the engine.&nbsp; This is one reason
+why it's important to have an airtight intake tract after the MAF sensor.&nbsp;
+The amount of metered air won't be correct if it's leaking out a disconnected hose!&nbsp;
+Air leaks are called vacuum or boost leaks, see <a href="boost-leak-tester-DIY-check.htm">1000q:
+boost leak test</a> for more reasons why this is bad and how to check for it in
+your turbo car.</p>
+<p>A faulty MAF signal will cause the car's computer to give too much or too
+little fuel.&nbsp; However, a TDI can run without a MAF signal at all, as can
+many cars.&nbsp; The car computer knows that there is either a nonsense signal
+or none at all and uses a default value to keep the engine
+running.&nbsp; The computer takes the engine load and speed, modifies the value
+for some fuel and engine temperature readings and MAF value, etc., to determine
+fuel injection timing and metering.&nbsp; A gasoline car will run poorly with no
+MAF because they have to be within a narrower air/fuel ratio to run smoothly
+compared to a diesel engine.&nbsp; Your TDI can run without the MAF but
+performance will be poor and the engine should feel sluggish and you should feel
+a lack of power.&nbsp; See <a href="../a4/MAF-sensor-testing-VW-cleaner.htm">1000q: mk4 MAF testing</a> for more tips on testing
+your mk4 MAF.&nbsp;&nbsp;</p>
+<p>The MAF also changed from a hot wire to a hot film type after the mk3 generation, see below for more details.</p>
+<p>Never use silicone detailing sprays or silicone products that have not cured near the intake on a running engine. These could deposit on the MAF and contaminate the sensor.</p>
+<h3>Mk3 TDI</h3>
+<p>The mk3 TDI uses a Pierberg MAF.&nbsp; This is a hot wire type MAF.&nbsp;
+Unlike the mk4 cars, it's a simpler device and it's unusual for the MAF to fail.&nbsp; VW part number is # 074-906-461
+(click the link to compare prices)</p>
+<center>
+<table cellSpacing="3" cellPadding="4" width="658" border="1">
+  <colgroup>
+    <col width="54">
+    <col width="197">
+    <col width="165">
+    <col width="193">
+  <thead>
+    <tr vAlign="top">
+      <th width="54">
+        <p align="center">Pin</p>
+      </th>
+      <th width="197">
+        <p align="center">Description</p>
+      </th>
+      <th width="165">
+        <p align="center">Wire color</p>
+      </th>
+      <th width="193">
+        <p align="center">Connected to</p>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td vAlign="bottom" width="54" SDNUM="1043;" SDVAL="1">
+        <p align="center">1</p>
+      </td>
+      <td vAlign="top" width="197">
+        <p align="center">5V reference input voltage</p>
+      </td>
+      <td vAlign="top" width="165">
+        <p align="center">Red/green</p>
+      </td>
+      <td vAlign="top" width="193">
+        <p align="center">pin 50 of the ECU</p>
+      </td>
+    </tr>
+    <tr>
+      <td vAlign="bottom" width="54" SDNUM="1043;" SDVAL="2">
+        <p align="center">2</p>
+      </td>
+      <td vAlign="top" width="197">
+        <p align="center">Signal ground</p>
+      </td>
+      <td vAlign="top" width="165">
+        <p align="center">Brown/blue</p>
+      </td>
+      <td vAlign="top" width="193">
+        <p align="center">pin 25 of the ECU</p>
+      </td>
+    </tr>
+    <tr>
+      <td vAlign="bottom" width="54" SDNUM="1043;" SDVAL="3">
+        <p align="center">3</p>
+      </td>
+      <td vAlign="top" width="197">
+        <p align="center">12V supply input</p>
+      </td>
+      <td vAlign="top" width="165">
+        <p align="center">Yellow/black</p>
+      </td>
+      <td vAlign="top" width="193">
+        <p align="center">relay 109</p>
+      </td>
+    </tr>
+    <tr>
+      <td vAlign="bottom" width="54" SDNUM="1043;" SDVAL="4">
+        <p align="center">4</p>
+      </td>
+      <td vAlign="top" width="197">
+        <p align="center">Not connected</p>
+      </td>
+      <td vAlign="top" width="165">
+        <p align="center">-</p>
+      </td>
+      <td vAlign="top" width="193">
+        <p align="center">-</p>
+      </td>
+    </tr>
+    <tr>
+      <td vAlign="bottom" width="54" SDNUM="1043;" SDVAL="5">
+        <p align="center">5</p>
+      </td>
+      <td vAlign="top" width="197">
+        <p align="center">Power ground</p>
+      </td>
+      <td vAlign="top" width="165">
+        <p align="center">Brown</p>
+      </td>
+      <td vAlign="top" width="193">
+        <p align="center">ground</p>
+      </td>
+    </tr>
+    <tr>
+      <td vAlign="bottom" width="54" SDNUM="1043;" SDVAL="6">
+        <p align="center">6</p>
+      </td>
+      <td vAlign="top" width="197">
+        <p align="center">Output voltage</p>
+      </td>
+      <td vAlign="top" width="165">
+        <p align="center">Purple/brown</p>
+      </td>
+      <td vAlign="top" width="193">
+        <p align="center">pin 52 of the ECU</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</center>
+<p>The hot wire MAF is composed of a thermistor (temperature sensing) wire and
+an ammeter (measures electrical amps). Since the MAF wire is a &quot;positive
+k&quot; thermistor, the hotter it gets, the higher its resistance. The colder it
+gets, the lower its resistance, and the more current that passes through the
+wire. However, the more current flowing through the wire, the hotter it gets
+(similar to an electric heater). This sets an upper stable limit of current,
+since as the resistance of the wire increases, the less current that flows
+through it. This &quot;stable&quot; point changes depending on how much air is
+flowing past the wire, providing cooling. The more air flowing past the wire,
+the more current the wire can allow through before it heats up enough to offset
+the current. Therefore, at any given time, the amount of air flowing through the
+MAF is proportional to the amount of current flowing through the wire in the
+sensor.</p>
+<p>The output voltage increases directly with the measured airflow.</p>
+<p>To clean it, use a non-residue electrical cleaner.&nbsp; These are slightly
+different than brake or carb cleaner.&nbsp; It's also possible that there is a
+wiring harness short or corroded plug.</p>
+<p>&nbsp;</p>
+<h3>Mk4, mk5, and mk6 TDI</h3>
+<p>The mk4 and mk5 TDI use a Bosch hot film MAF.&nbsp; This is a membrane type MAF
+and can take much faster and more accurate measurements than a hot wire.&nbsp;
+It is known for a slow loss of function and causing low power in the TDI and was
+an extended recall item on pre 2002 mk4 TDIs..&nbsp; The most recent OEM part
+numbers are #  038 906 461 C for the ALH engine,
+#038-906-461-B for the BEW and
+mk5 BRM pumpe duse engines (same part), #074 906 461 b
+for the 04-05 Passat BHW engine, but check with your VW part dealer to see if this is current.&nbsp;
+VW has gone through a number of MAF part numbers, the latest part number for the
+ALH engine ends in
+&quot;c&quot;.&nbsp; The housing is very different but it's not known if it's
+more robust than earlier designs because the element is what fails.<br>
+<img border="0" src="../../images/a4/maf3.jpg" width="540" height="759"></p>
+<p>MAFs from VW gasser models will bolt on, but I would not use them because they
+require modification to send the right signal and a new or rebuilt MAF should
+only cost around $120.</p>
+<p>Here is the location of the MAF outlined in yellow.&nbsp; The
+&quot;chip&quot; element is replaceable separately from the &quot;chip+plastic
+housing&quot;, see <a href="../a4/MAF-sensor-testing-VW-cleaner.htm">1000q: mk4 MAF testing</a> for more
+troubleshooting tips.<br>
+<img border="0" src="../../images/misc/maflocation.jpg" width="625" height="279"></p>
+<dl>
+  <dd>
+    <table cellSpacing="3" cellPadding="4" width="697" border="1">
+      <colgroup>
+        <col width="54">
+        <col width="197">
+        <col width="204">
+        <col width="193">
+      <thead>
+        <tr vAlign="top">
+          <th width="54">
+            <p align="center">Pin</p>
+          </th>
+          <th width="197">
+            <p align="center">Description</p>
+          </th>
+          <th width="204">
+            <p align="center">Wire color</p>
+          </th>
+          <th width="193">
+            <p align="center">Connected to</p>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td vAlign="bottom" width="54" SDNUM="1043;" SDVAL="1">
+            <p align="center">1</p>
+          </td>
+          <td vAlign="top" width="197">
+            <p align="center">Temperature sensor output,<br>
+            not used in ALH engine</p>
+          </td>
+          <td vAlign="top" width="204">
+            <p align="center">-</p>
+          </td>
+          <td vAlign="top" width="193">
+            <p align="center">-</p>
+          </td>
+        </tr>
+        <tr>
+          <td vAlign="bottom" width="54" SDNUM="1043;" SDVAL="2">
+            <p align="center">2</p>
+          </td>
+          <td vAlign="top" width="197">
+            <p align="center">12V supply input</p>
+          </td>
+          <td vAlign="top" width="204">
+            <p align="center">Yellow/black</p>
+          </td>
+          <td vAlign="top" width="193">
+            <p align="center">relay 109</p>
+          </td>
+        </tr>
+        <tr>
+          <td vAlign="bottom" width="54" SDNUM="1043;" SDVAL="3">
+            <p align="center">3</p>
+          </td>
+          <td vAlign="top" width="197">
+            <p align="center">Ground</p>
+          </td>
+          <td vAlign="top" width="204">
+            <p align="center">Brown</p>
+          </td>
+          <td vAlign="top" width="193">
+            <p align="center">pin 4 of the ECU</p>
+          </td>
+        </tr>
+        <tr>
+          <td vAlign="bottom" width="54" SDNUM="1043;" SDVAL="4">
+            <p align="center">4</p>
+          </td>
+          <td vAlign="top" width="197">
+            <p align="center">5V reference input voltage</p>
+          </td>
+          <td vAlign="top" width="204">
+            <p align="center">Red/green</p>
+          </td>
+          <td vAlign="top" width="193">
+            <p align="center">pin 50 of the ECU</p>
+          </td>
+        </tr>
+        <tr>
+          <td vAlign="bottom" width="54" SDNUM="1043;" SDVAL="5">
+            <p align="center">5</p>
+          </td>
+          <td vAlign="top" width="197">
+            <p align="center">Output voltage</p>
+          </td>
+          <td vAlign="top" width="204">
+            <p align="center">Brown/blue</p>
+          </td>
+          <td vAlign="top" width="193">
+            <p align="center">pin 52 of the ECU</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </dd>
+</dl>
+<p>&nbsp;</p>
+<p>A hot film MAF is comprised of a diaphragm with a heating zone and two
+symmetrically arranged temperature sensors on either side of the heating zone. A
+control circuit maintains the heating zone at a constant temperature above
+ambient such that the downstream sensor reads a lower (but constant) temperature,
+regardless of ambient air temperature. The more air that blows past the upstream
+sensor, the cooler it is when compared to the downstream sensor. Thus, the
+change in temperature (&#916;T) between the upstream and downstream temperature
+sensor is proportional to the amount (and direction) of air mass flowing over
+the membrane. A thin film MAF can also detect a reverse flow of air.</p>
+<p>The graph below of a thin film MAF shows how the temperature is steady before
+and after the heating zone with no air flow but changes with air flow.</p>
+<p><img border="0" src="../../images/misc/Hot_film_maf.jpg" width="679" height="450"></p>
+
+<p>Feel free to sign up and ask a question about this article at the forums<a href="../../forum/index.php">:
+myturbodiesel.com forums</a></p>
+<?php include("../../footer.php"); ?>
+</html>

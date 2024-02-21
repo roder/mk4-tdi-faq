@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  "http://www.w3.org/TR/html4/loose.dtd">  
+<html xmlns:fb="http://www.facebook.com/2008/fbml"><head>
+ 
+ 
+<title>How to replace the VNT actuator on a BEW TDI engine on VW Golf or Jetta</title>
+
+<meta name="description" content="How to replace the retrofit VNT actuator on VW Golf, Jetta BEW engine">
+<meta name="keywords" content="vnt, diesel, actuator, turbo, wastegate, sticking, replacement">
+<?php include("../../header.php"); ?>
+<?php include("../../menu.php"); ?>
+<h1>How to replace the VNT actuator on a BEW TDI engine (modification required)</h1>
+
+<p><a href="a4-pumpe-tdi-bew-index.htm"> back to 1000q: pumpe duse mk4 &quot;how to&quot; list and FAQ</a><a href="a4-ALH-TDI-engine-index.htm"><br>
+</a><a href="../multi/difficulty_scale.htm">difficulty: 2/5</a> </p>
+
+<p><b><font size="4">Introduction</font></b></p>
+<h2>This article shows how to replace the  turbo actuator on a 2004-2006 mk4 TDI engine with BEW engine code</h2>
+<p> The BEW engine uses a Garrett turbocharger VNT-15 with a smart actuator, the G500
+sensor. The difference on  the smart actuator vs. earlier engines is the sensor which detects actuator position. First read <a href="VNT-wastegate-adjust.htm">1000q: VNT replacement/testing</a> for background on how the VNT system is controlled and general information on how to test/replace it. This article is specific to the VNT actuator for BEW engines.</p>
+<p>A common problem is the wires going into the actuator breaking. First inspect the wiring and see if it can be repaired. Here is a thumbnail (click to enlarge) of the original BEW actuator.<br>
+<a href="../../images/a4/bew-vnt-2.jpg" rel="lightbox"><img src="../../images/a4/bew-vnt-2-tn.jpg" width="213" height="250"></a></p>
+<p>The replacement actuator is not a direct fit. It requires modification to fit the BEW engine but it's all that is available. The only other option is to replace the entire turbo at much greater cost. <font color="black">VW or Borg Warner does not sell the original actuator by itself.</font></p>
+<p>If you have a Kermatdi tune, they can program it so that you can use the cheaper non-smart actuator for ALH engines.</p>
+<p>In case you found this article and you have a BRM (mk5 Jetta 2005.5-2006) engine, do not use this actuator. BRM need a &quot;reverse&quot; actuator for Borg Warner turbos. Use the  CBEA/CJAA actuator (09+ engine) with a custom bracket. There is no direct fit actuator.</p>
+<p><font color="black">For support on this article <a href="http://www.myturbodiesel.com/forum/f5/04-pd-overboost-limp-mode-resolution-21531/">please post in this forum thread by user motox502</a>, this article archives his post.</font></p>
+<p><font color="black">I avoid any actuator sold by <img src="../../images/badseller.png" alt="" width="452" height="21" border="0">since
+  it's almost certainly a cheap copycat part.&nbsp; I also had a bad experience
+with this seller so never again.</font></p>
+<p><font size="4"><b>Parts</b></font></p>
+<p><font color="black">1</font><font color="black"> <a href="http://www.kermatdi.com/servlet/-strse-83/The-"Smart"-actuator-for/Detail" target="_blank"> smart VNT TDI actuator from kermatdi.com</a></font></p>
+<p>1 <a href="http://www.ross-tech.com/" target="_blank">Ross tech VCDS cable</a> for datalogging</p>
+<p><b><font size="4">Procedure</font></b></p>
+<p>Here is a VCDS datalog showing blocks 003 and 011. The codes thrown were P0234 Boost Pressure - Regulation Limit Exceeded (Overboost Condition) and 
+P2564 Turbocharger (TC) Boost Control Position Sensor (G581) - Signal too Low.<br>
+<br>
+<img src="../../images/a4/logbefore.jpg" width="799" height="381"></p>
+<p>I inspected the N75 valve and vacuum lines with VCDS and made sure that it was   working properly. I then hooked up a Mityvac to make sure the vacuum actuator   was working. As I applied vacuum, I would hear a crunching noise like the spring   inside the actuator was broken. I then used my VCDS to monitor block 43 channel   2 to make sure the sensor on the actuator was working correctly. As I applied   vacuum, it would only go from 80-100%. So after seeing that the actuator was   having troubles moving and the sensor wasn't reading correctly, I decided that   this was my issue.</p>
+<p>Since I'm on my final year of getting my mechanical   engineering degree, I definitely don't have the money for a new turbo. I found a   few small write-ups (Thanks to this site!) on retrofitting a Garrett Smart   Actuator and it looked very simple. Ordered one up from KermaTDI for $180 and   picked up $3 in hardware from the store. Drilled off the old bracket and bolted   it up to the new actuator. I then extended the rod to the length of the old one   using a coupler and threaded rod. Installation went very well and now my turbo   is boosting perfectly!!! Just wanted to say thanks to the guys that previously   made this work and documenting it on here and saving me a bunch of money!!! Car   has never ran this great since I have owned it! Here are a few pictures of the   install and the new log.</p>
+<p><img src="../../images/a4/bew-vnt.jpg" width="450" height="798"><img src="../../images/a4/bew-vnt-actuator.jpg" width="450" height="798"></p>
+<p>The after log:<br>
+  <img src="../../images/a4/logafter.jpg" width="788" height="380"><BR>
+  
+</p>
+<p>If you have any questions about the VNT actuator on the BEW engine, <font color="black"> <a href="http://www.myturbodiesel.com/forum/f5/04-pd-overboost-limp-mode-resolution-21531/">please post in this forum thread by user motox502</a>.</font>.</p><?php include("../../footer.php"); ?>
+</html>

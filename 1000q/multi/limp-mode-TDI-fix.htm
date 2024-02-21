@@ -1,0 +1,347 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  "http://www.w3.org/TR/html4/loose.dtd">  
+<html xmlns:fb="http://www.facebook.com/2008/fbml"><head>
+<title>Fixing limp mode low power in a VW Jetta Golf TDI or wagon - feels like lost the turbo boost</title>
+<meta name="description" content="How to fix power loss (limp mode)in a VW TDI">
+<meta name="keywords" content="power loss, limp mode, vw tdi, audi tdi, bad turbo, turbo failure, no power, jetta, golf, sportwagen">
+<?php include("../../header.php"); ?>
+<?php include("../../menu.php"); ?>
+
+<h1>Limp mode: What is it, what are the causes, and how to fix it
+for the Audi and VW TDI diesel turbo</h1>
+<p><a href="../a3b4/mk3-vw-passat-jetta-diy-index.htm">
+1000q: mk3 jetta/passat &quot;how to&quot; index list</a><br>
+<a href="../a4/a4-ALH-TDI-engine-index.htm">1000q: mk4 &quot;how to&quot; index and
+checklists</a><a href="../a4/a4-pumpe-tdi-bew-index.htm"><br>
+1000q: mk4 &quot;how to&quot; index and checklist for pumpe duse<br>
+</a><a href="../b5/2004-2005-vw-passat-TDI-FAQ-DIY.htm">1000q: b5 Passat
+specific DIY index</a><a href="../a5/a5-Jetta-TDI-FAQ-index.htm"><br>
+1000q: mk5 Jetta TDI &quot;how to&quot; index</a><br>
+<a href="../a6/a6-VW-Golf-Jetta-TDI-DIY-index.htm">1000q: mk6 Golf-Jetta-Sportwagen DIY index</a></p>
+<p><b><font size="4">Introduction</font></b></p>
+<h2>Limp mode is when your VW or Audi TDI suddenly loses power while driving and
+is restored after you turn the car off and back on.&nbsp; This article shows how
+to fix limp mode on your TDI engine.</h2>
+<p>It feels
+as if the car is being held back when you request more power or as if the
+parking brake is on.&nbsp;&nbsp; You might not notice it on a level road with light engine load because you
+don't need much power to drive slowly on a level road.&nbsp; You're more likely to trigger/notice it on highway on ramps or going up hills because this requests more
+power/turbo boost.&nbsp; The check engine light (CEL) or malfunction
+indicator light (MIL) on the instrument cluster doesn't always go off.&nbsp; If you
+have always have low power without the sudden cut out feeling or the engine just
+won't rev high then read <a href="low-power-fix-TDI.htm">1000q: constant low power on
+TDI</a>.&nbsp; Many causes and symptoms overlap so read both
+articles - this article focuses more on power suddenly cutting out instead of
+constant low power.</p>
+<h3>What isn't limp mode</h3>
+<p>
+Limp mode is not when the engine seems to start fine but immediately suddenly shuts off.&nbsp; If this happens look for the immobilizer &quot;yellow car&quot; symbol on the instrument panel, see
+<a href="immobilizer-VW-Audi-FAQ.htm">1000q: immo FAQ</a>.&nbsp; If this is the case the anti theft immobilizer is
+shutting off the engine.&nbsp; If the car shuts
+completely off well after 2 seconds it's not an immobilizer problem.&nbsp;
+Check the air intake piping, fuel filter, fuel pickup in the fuel tank,
+and fuel shutoff solenoid at the injection pump (1996-2003 cars only, single
+black wire leading to solenoid).</p>
+<p>It's not when you turn the key and the engine doesn't even try to start or
+turn over.&nbsp; You have a low battery, ignition key, or starter problem.&nbsp;
+See <a href="starter-fix-removal-mk3-mk4-VW.htm">1000q: starter check and diagnosis</a> to see the
+fix if you have a mk3 or mk4 car.&nbsp; (Or see <a href="../b5/starter-vw-passat-replace.htm">1000q:
+b5 Passat starter</a>, <a href="../a5/starter-removal-Jetta-mk5.htm">1000q: mk5
+Jetta starter FAQ</a>, if you have one of those cars.)</p>
+<p> If the engine shuts off suddenly during
+normal driving and you don't see the glow plug light go on during failed
+restarts then replace the black relay 109 with the newer gray relay 109 (1996-2003 cars only,
+it's under the steering wheel in the relay panel).&nbsp; It sometimes cools and lets you restart.&nbsp;
+The problem with black relay 109 was bad soldering.&nbsp; This relay controls
+power to the ECU and prevents the glow plug light from coming on at all during
+failed restarts.&nbsp;&nbsp;Newer cars have a similar main power relay on the fusebox.</p>
+<p>If the engine stays at a constant 1200 RPM and won't go higher your
+accelerator pedal or wiring could be faulty - this should trip an error code.&nbsp; This
+could produce constant low power instead of limp mode but the error code and
+other symptoms should tip you off.&nbsp; The pedal is drive by wire, meaning
+there's no cable attaching it to a throttle, it's just electrical wires and
+sensors.&nbsp; In the mk3 TDI the pedal sensor is a potentiometer.&nbsp; In the
+mk4 TDI there are 2 pedal sensors (g79 and g185 sensors which are 
+potentiometers), if one fails you should get an error code, if both fail the ECU
+will limit engine RPM to 1200.&nbsp;&nbsp; This should be obvious when reading
+the accelerator pedal value through VCDS.&nbsp; Turn the car on, plug in VCDS,
+and it will tell you how far the accelerator pedal is being pressed.&nbsp;&nbsp;</p>
+<p>If the car ran fine before but is suddenly bucking or jerking at a certain
+RPM range you probably have a loose/cracked intake piping.&nbsp; It's subjected
+to heat and pressure on turbo cars and can crack, releasing the intake
+air.&nbsp; A clip may have also released, letting a hose slip off.&nbsp; Look
+around for loose hoses and then do a boost leak check.&nbsp; See <a href="boost-leak-tester-DIY-check.htm">1000q:
+boost leak testing</a> for more details.&nbsp; A major boost leak may result in
+hard starting but smooth but smoky idling.</p>
+<p>If the engine RPM goes up but
+the car's speed stays the same or doesn't increase with RPM, then you have a bad/slipping clutch or transmission.&nbsp; If the
+engine RPM stays as sluggish as the car's speed
+the transmission/clutch is probably fine.&nbsp; See <a href="../clutch-kit-FAQ-VW-Audi.htm">1000q:
+clutch FAQ</a> for more details on clutches used on the TDI and the dual mass
+clutch.&nbsp; If you have a <a href="../DSG-faq-VW-Audi.htm">DSG transmission</a>
+and the PNDRL &quot;shifter&quot; gear selector lights are all on or blinking, you have a low
+battery (also check voltage regulator or alternator).&nbsp; Some DSG are
+starting to show defective transmission temp sensors which cause false
+neutrals.&nbsp;</p>
+<p>It's never the glow plugs or glow plug harness, these don't have any effect
+on power.</p>
+<p>If the car's top speed is 20 mph, there are other major problems.&nbsp; Limp
+mode should still let you slowly accelerate to 40-50 mph.</p>
+<h3>Why is there a limp mode?</h3>
+<p>The car's computer is constantly monitoring sensors such as air flow, EGR flow, fuel flow,
+etc., and is expecting certain values.&nbsp; If a sensor sends a signal
+that is &quot;out of bounds&quot; through malfunction or failure, the car's computer will fall back to a safety
+map or cut fueling and turbo boost to prevent damage.&nbsp; This is because overboosting or overfueling
+could cause engine damage.&nbsp; A diesel is built more sturdy than a
+gasoline engine and boost spikes are normal in a diesel.&nbsp; Even still, any engine has limits so the computer
+pulls back engine power to prevent these limits
+from being exceeded.</p>
+<p> The effect is that you lose the power from the turbo or don't get fuel, making it
+feel as if you lost the turbo or lost all power right when you need it.&nbsp; Also see: <a href="boost-leak-tester-DIY-check.htm">1000q: boost and vacuum leak testing</a>
+, <a href="../turbocharging.htm">1000q: turbocharging FAQ,</a> and <a href="maf-faq-tdi.htm">1000q:
+MAF FAQ</a> for some more background information.&nbsp; Again, if you have
+constant low power or can't rev the engine high, also read <a href="low-power-fix-TDI.htm">1000q:
+constant low power on TDI</a>.</p>
+<p> Here are the generations for TDI engines sold in North America.<br>
+  Mk3 (mark 3) = 1996-1997 3rd generation Passat TDI or 1996-1999 3rd gen Jetta TDI<br>
+Mk4= 1998-2006 New Beetle, 1999-2005 Jetta, 1999-2006 Golf, 2004-2005 Passat TDI<br>
+Mk5= 2005.5-2010 Jetta TDI sedan and wagon<br>
+Mk6= 2010+ Golf, Jetta wagon,  2011+ Jetta TDI, 2012+ Passat TDI</p>
+<h3>Procedure - Troubleshooting steps for the VW or Audi TDI engine</h3>
+<p>With any problem on a modern car, first scan the car's computer for error codes and see what you have.&nbsp; If
+you don't have a code scanner, many auto parts stores will scan it for free.&nbsp;
+To access sensor readings or for problems that aren't caused by something obvious, you need a <a href="http://www.ross-tech.com/" target="_blank">Ross
+tech VCDS cable</a>.&nbsp; This is a VW Audi specific laptop computer diagnostic
+cable to talk to the car computer.&nbsp; It is much more advanced than what the
+generic error code scanners can do and without it you can't do the more advanced
+tests.&nbsp; The cables aren't cheap but they are lot cheaper than blindly replacing parts or paying a mechanic. Below are some of the more common codes that show up from limp
+mode.</p>
+<p>Then inspect all the vacuum lines for
+worn ends or split corners.&nbsp; Also inspect boost hoses for loose couplers or
+do <a href="boost-leak-tester-DIY-check.htm"> a boost leak test</a>.&nbsp;&nbsp;The reason boost
+leak test is also listed above is because sometimes it causes limp mode and sometimes it causes stumbling and bucking with an OK idle.</p>
+<p>Since any cause of limp power is possible in your exact case, this article is
+divided into more common, less common, and rare causes.&nbsp; The numbers are in
+no particular order, it's just for organization.&nbsp; Of course, if you have
+any error codes tripped or have a clue to what's causing limp mode you should
+address those causes first.&nbsp; If there is an article showing more details,
+it will be linked from this page, otherwise ask your question in the <a href="../../forum/index.php">myturbodiesel
+forums.</a>&nbsp; Touareg troubleshooting is not included here but the basic
+principles are the same and I think that many of the codes will be caused by the
+same problems.</p>
+<p>Kermatdi sells a <a href="http://www.kermatdi.com/servlet/the-8214/Vacuum%2C-System/Detail" target="_blank">limp mode repair kit</a> that fixes the most common problems. This page explains why and how to narrow these common problems down.</p>
+<hr>
+<h3>More common causes of limp mode</h3>
+<h4>1.&nbsp; Error code that shows Boost Deviation Intermittent,
+Boost Deviation Negative,
+Boost Deviation Positive, Intake Manifold Pressure xxxxx, charge pressure
+control deviation</h4>
+<p>These codes show a problem with the system that senses turbo boost and
+controls the turbo.&nbsp; Most of the time, a sudden cut of power is related to
+sensor or turbo problems.&nbsp; These codes generally show an underboost or
+overboost situation which sets you into limp mode.&nbsp; The N75 solenoid is the solenoid that controls
+pressure to the turbo wastegate (mk3 TDI) or vacuum to the VNT actuator (mk4,
+mk5, mk6 TDI).&nbsp; Here's how it works: once the intake manifold pressure
+sensor shows boost pressure reaching the desired value, the ECU activates the N75 solenoid
+which fluctuates vac/pressure to the wastegate/VNT actuator to stabilize the
+boost pressure at the desired value.&nbsp; If the vacuum lines are broken or the solenoid is bad,
+it won't control pressure which causes a problem which the ECU sees.&nbsp; You can try removing
+the N75
+and flushing it out with electronic cleaner.&nbsp; Once dry, try a squirt of
+WD40 inside to help the solenoid move freely.</p>
+<p>Check the wiring harness grounds for corrosion or breaks.&nbsp; Bad grounds
+can cause mysterious electrical problems.&nbsp; Also check the
+wiring/connector for breaks or corrosion coming to and from the N75
+valve.&nbsp;&nbsp; If that doesn't work, N75 replacement may be needed, see
+below for the part numbers.&nbsp;&nbsp;The N75 in the 1996-97 passat is on the
+firewall next to the coolant reservoir.&nbsp; The 1996-1999 Jetta's N75 is in
+the engine bay on the passenger side fender by the fuel filter.&nbsp; The
+1998-2006 mk4 generation N75 is on the firewall behind the accordion-like hose
+coming from the airbox.</p>
+<p>N75
+1996-1999 mk3 body, VW #028-906-283-F (pierburg type n75)<br>
+N75
+1998-1999 mk4 body, VW #1H0-906-627-A, for Up To Vin # 9 MX 999000<br>
+N75
+1998-2005 mk4 body, VW #1J0-906-627-A,&nbsp; ALH and BHW engine, for <span class="partdetail-description">From
+Vin # 9M Y 000 001, D shaped connector</span></p>
+<p>Here is what the n75 solenoid looks like inside and how it works: the solenoid cycles back and forth to allow vacuuum through it. (click to enlarge)<br>
+<a href="../../images/misc/n75-1.png" rel="lightbox-n"><img src="../../images/misc/tn/n75-1-tn.png" alt="n75 solenoid" width="210" height="350"></a> <a href="../../images/misc/n75-2.jpg" rel="lightbox-n"><img src="../../images/misc/tn/n75-2-tn.jpg" alt="n75 solenoid" width="319" height="350"></a></p>
+<p><font color="black">If you have an mk4, swap the EGR solenoid with the n75
+solenoid as a temporary test for the N75.&nbsp; It's
+possible for the EGR solenoid to cause limp mode but this is not as
+common as the other problems, cleaning it out may be the solution.</font>&nbsp;
+Again, check the vacuum lines first.</p>
+<p><b>1a.</b>&nbsp;<b> </b>Boost Deviation Intermittent means you most likely have a vacuum leak somewhere.&nbsp;
+Check all vacuum lines, turbo actuator, and plastic fittings.&nbsp; There are vacuum lines
+that connect the turbo, car computer, sensors, etc., and tend to get frayed
+at the ends or rub through.&nbsp;&nbsp;<br>
+<br>
+<b>1b.</b> Boost Deviation Negative means you have a clogged intake, turbo actuator that's
+leaking, bad vacuum lines, or a sticky turbo actuator lever.&nbsp; If
+you have a VNT turbo, it may be because of stuck VNT vanes which requires removal and cleaning of the
+vanes.&nbsp; See the below section for related causes.<br>
+<br>
+<b>1c.</b>&nbsp; Boost Deviation Positive means you have a N75 that's bad/malfunctioning,
+actuator that's leaking, bad vacuum lines, bad boost sensor, or a <a href="../a4/VNT-wastegate-adjust.htm"> sticky turbo VNT</a> or wastegate
+lever.&nbsp; If you have a VNT turbo, it may require removal and cleaning of the
+vanes.&nbsp; See the below section for related causes.&nbsp; If you're getting
+an overboost error, it's never the MAF.</p>
+<p>For mk3 cars only:&nbsp; The A3 and B4 models (1996- 1999 jetta/passat TDI) have a vacuum line inside of the
+ECU.&nbsp; If you get error 65535 - Internal Control Module Memory Error and
+some boost codes, it's most likely this hose.&nbsp; The plastic inside may be fragile
+so see <a href="../a3b4/ecu-hose-chip-tdi-65535.htm">1000q:
+ecu hose</a> for a &quot;how to&quot;, pictures, and a diagram of the vacuum line routing.&nbsp;
+Later cars do not have this internal line.&nbsp; These cars do not have a VNT and the
+wastegate is fairly reliable.&nbsp; To test the wastegate actuator, apply pressure to the
+vac line going to the wastegate can.&nbsp; The wastegate arm should move.&nbsp;
+If it doesn't, it indicates a problem with the actuator or vacuum line.</p>
+<p>For mk4 and mk5 cars only:&nbsp; The turbo actuator or turbo vanes can get
+stuck.&nbsp; See <a href="../a4/VNT-wastegate-adjust.htm">1000q: VNT actuator check and
+removal</a> and <a href="../a4/VNT-turbo-removal-vanes.htm">1000q: turbo cleaning for more
+details</a> and the below section.&nbsp; Below are vacuum line diagrams for the
+mk4 ALH (below left) and BEW (labeled BEW) engines.&nbsp; (1Z and AHU engine vacuum
+diagram was in the ecu hose article linked above).&nbsp; There should be
+stickers above the radiator support that have vacuum diagrams there too if you don't have one of these engines.<br>
+<img src="../../images/a4/alh2vac.jpg" alt="alh vacuum diagram" width="647" height="420" border="0"><img src="../../images/a4/bewvac.jpg" alt="bew vacuum diagram" width="576" height="419" border="0"></p>
+<h4> <span class="partdetail-description">2.&nbsp; Bad/sticking VNT actuator
+or turbo vanes</span></h4>
+<p>If you have an mk4 or newer TDI, your car uses a VNT
+turbo.&nbsp; This section does not apply to the mk3 TDI.&nbsp; See <a href="../turbocharging.htm">1000q: turbocharging
+FAQ</a> to see exactly what a VNT turbo is.&nbsp; The actuator or adjustable
+vanes inside the turbo can stick or go bad from soot and<font color="black"> carbon clogging the VNT vanes.&nbsp; On a regular
+basis like highway on ramps, you
+should rev the engine high and hard to raise exhaust gas temperatures (EGT).&nbsp;
+Raising EGT will burn up and blow out carbon and soot build up in the exhaust
+system and turbo.&nbsp; Only do this once the
+engine is fully warmed up and let the car cool down with a period of normal
+driving afterwards.&nbsp;&nbsp;More detailed procedures and pictures here: <a href="../a4/VNT-wastegate-adjust.htm">1000q:
+VNT actuator check and removal and diagnosis TDI</a>.&nbsp; This link gives
+instructions on how exactly to check it.&nbsp; Again, the mk3 TDI uses a
+wastegate, use pressure to check it instead of vacuum.</font></p>
+<p><font color="black">If it's sticking, try to free it up by
+lubricating it, manually moving it, or by giving it a hard run.&nbsp; This may
+burn up or loosen any sticking bits inside.&nbsp; Give it a blast with PB Blaster or another penetrating lubricant.&nbsp; PB Blaster eats rust
+more than WD-40.&nbsp; This might only provide a temporary solution.&nbsp; If
+you read the above link on detailed diagnosis and need a new one, click the links here to compare current pricing, shipping, tax, etc.: <a href="http://www.kermatdi.com/servlet/-strse-213/VNT-actuator/Detail">kermatdi
+VNT actuator</a>,  Dealers don't normally stock this part or
+sell it because it's more profitable to sell an entire turbo and selling an
+entire turbo also fixes/rules out any internal turbo problem and fixes the
+problem in 1 visit.</font></p>
+<p><font color="black">If you're lucky the VNT actuator or vacuum lines are
+leaking or the N75 valve is bad.&nbsp; Attach a vacuum pump and see if they're holding vacuum. If not then the turbo vanes or lever are
+stuck and the turbo should be removed for disassembly and cleaning.&nbsp; See <a href="../a4/turbo-removal-TDI-engine.htm">1000q:
+turbo removal ALH/BEW engine</a>.</font></p>
+<p>The N75 valve controls vac/pressure to the wastegate/VNT actuator.  It's labeled &quot;boost pressure frequency valve&quot; in the diagrams above. It should be getting around 22&quot; vacuum upstream of the valve (check the vac pump output lines) and about 19-20&quot; vacuum downstream of it. If it's close to this and the N75 valve moves freely with no error codes the valve is most likely OK. If the solenoid themselves are bad they should throw a code. If they are are physically worn the vacuum pressure will be low from leaking. On the ALH engine you can switch the N75 with the N18 EGR solenoid (egr frequency valve) as a test.</p>
+<p>The videos below show how the VNT actuator and vane work.&nbsp; The lever on
+the outside is welded to a lever inside the turbo housing.&nbsp; This is how it
+moves the VNT vanes.&nbsp; See the below videos to see how smoothly and free the
+lever should move.&nbsp; It should not stick or bind at all.&nbsp; Vacuum is
+being applied to the can, not pressure.&nbsp; The lever moves a ring and the ring moves the vanes.&nbsp; These vanes change
+the angle and speed of exhaust hitting the turbine wheel.&nbsp; If these vanes
+are sticking it will cause low power or limp mode, depending how how badly
+they're stuck and at what angle.<br><iframe width="480" height="360" src="http://www.youtube.com/embed/QdqMmB3hxTM?rel=0" frameborder="0" allowfullscreen></iframe><iframe width="480" height="360" src="http://www.youtube.com/embed/Qu0UGKS7-JQ?rel=0" frameborder="0" allowfullscreen></iframe>
+</p>
+<p>Below is a video showing a Borg Warner turbo. The above videos show a Garrett turbo.<br><iframe width="853" height="480" src="//www.youtube.com/embed/Ppif4qC560U?rel=0" frameborder="0" allowfullscreen></iframe>
+</p>
+<p><img src="../../images/misc/tdi-smart-vnt-sensor-actuator.jpg" alt="tdi vnt actuator" width="486" height="405" border="0" align="right">If
+you have a 2004+ TDI, your car has a
+smart VNT actuator that has a sensor to check its position, pictured
+right.&nbsp; The wires for the sensor tend to break or rub through.&nbsp;
+The exception is the 2004-2005 VW Passat TDI which doesn't have this sensor. As you can see, </p>
+<p>The mk5-mk6 cars use a Borg Warner turbo that moves out with vacuum instead of in but it otherwise works the same. My mk5 BRM engine Jetta actuator started to push out around 3&quot; vac and was fully extended around 17-18&quot;. My mk6 CJAA engine actuator started around 2-3&quot; and was fully extended at 15&quot;. The newer engines use active feedback from the smart actuator to help control turbo boost.</p>
+<p>The stop screw position is also very important. It seems to cause hesitation on Borg Warner turbos if misadjusted or is in need of adjustment. See <a href="../a5/turbo-response-adjustment-tdi.htm">1000q: mk5 stop screw check and hesitation solution</a> for details. Mk4 TDI engine stop screw adjustment is similar but VCDS cannot do the test described in the article.</p>
+<h4>
+3.&nbsp; Check for intake piping that is loose, not clamped correctly, or split
+hoses.&nbsp; Do a boost leak test on your TDI engine.
+</h4>
+<p>
+ See <a href="boost-leak-tester-DIY-check.htm">1000q: boost leak check</a> for more
+details.&nbsp;&nbsp; A fault in intake manifold pressure could indicate this or
+worn vacuum lines.&nbsp; Often, intake hoses will split due to age or
+rubbing/proximity to exhaust piping.&nbsp; Mk3 Jetta tend to have the rubber
+elbow hose before the intake manifold split on the far side where you can't see
+it.&nbsp; If you worked on the car recently did you attach and tighten all
+piping?&nbsp; It's possible a hose has since popped off.&nbsp; Did someone stuff paper towels into the intake piping and forget
+to take them out?
+</p>
+<p>A cracked hose or loose connector lets measured air
+out.&nbsp; No air or major leaks = poor engine running or stuttering.&nbsp; A
+visual inspection may not reveal all the possible or hard to see spots where
+leaks can form.&nbsp; See <a href="boost-leak-tester-DIY-check.htm">1000q: boost leak check</a>
+for a foolproof method of finding all leaks.&nbsp; Common places for a boost
+leak to occur is at hose ends (the hoses pop off due to a loose connector or
+worn locking tab), the corners, or places where it rubs against something else.&nbsp;
+mk3 Jetta TDI tended to wear out the rubber hose before the intake manifold
+because it's close to the hot exhaust piping.&nbsp; mk4 Passat TDI tend to wear
+out one of the lower intake hoses because it rubs against a ground cable.</p>
+<p>2004 and newer engines use snap hose couplers.&nbsp; These quick connect tab-spring
+connections can pop off if it's not tight or wear down the locking tabs.&nbsp; If
+it's only locked on 1 side (the clips+tabs are on 2 sides) the hose can pop off halfway and let boost out.&nbsp; For some reason, mk4
+engines tend to wear the tabs at the intake manifold (probably due to a looser
+fit) which made the hose pop out.&nbsp; This is shown below.&nbsp; If it's loose you can use an <a href="http://www.kermatdi.com/servlet/-strse-378/Pumpe-Duse-Intake-Hose-fdsh-Manifold/Detail">aftermarket
+doggie collar</a> to lock it in place or replace the hose.&nbsp; A replacement
+for the BEW engine
+hose shown below is VW# 1j0 145 838 t (1j0145838t)<br>
+<img src="../../images/a4/TB_head_rem/pdtb13.jpg" alt="tdi intake hose" width="720" height="540" border="0"></p>
+<h4>4.&nbsp; EGR or exhaust leak can also cause limp mode
+</h4>
+<p>Was the intake manifold recently removed and cleaned?&nbsp; The metal EGR
+hoses could have come loose or cracked.&nbsp; If there's enough of an exhaust
+leak at the EGR hoses or exhaust manifold, the gases powering the turbo will leak
+out, causing unexpected values and limp mode.&nbsp; Check for soot stains around
+the exhaust area.&nbsp; It's common for the intake hoses or valve cover to seep
+oil so make sure that's not what you see.&nbsp; There's a video of an EGR hose
+leak in the boost leak article above.
+</p>
+<h4>5.&nbsp; If the fuel filter has not been changed in the last 20,000 miles, it's
+possible that it's clogged and is restricting fuel.</h4>
+<p> A bad batch of biodiesel or diesel fuel
+could clog the fuel filter.&nbsp; If you
+have a high mileage car, using a high percentage of biodiesel can loosen built
+up deposits that travel through the fuel lines and clog the fuel filter.&nbsp; If your fuel injectors
+have been sitting dry outside of the car, diesel fuel can go bad and gum up the
+tiny components inside the fuel injector.</p>
+<h4><span class="partdetail-description">6.&nbsp; The intake could be so clogged
+with carbon that it's causing limp mode.</span></h4>
+<p><span class="partdetail-description">Remove the intake piping before the intake manifold
+and look with a flashlight.&nbsp; If you've never seen a clogged intake, you
+will be surprised at the amount of carbon buildup in the intake manifold.&nbsp;
+Up to 1/5-1/6&quot; of buildup on the inside is normal.&nbsp; Please refer to <a href="../a3b4/clean-intake-manifold-tdi.htm">1000q:
+mk3 intake cleaning and removal</a>, <a href="../a4/clean-intake-manifold-VW-TDI-carbon.htm">1000q:
+mk4 ALH intake cleaning</a>, or <a href="../a4/clean-intake-manifold-pd.htm">1000q:
+mk5 intake and EGR cleaning</a>.&nbsp; Mk3 and mk4 cars are more prone to carbon
+buildup due to design and EGR metering.&nbsp; Now that all fuel sold in North
+America (not Mexico) is ultra low sulfur diesel (USLD) only, clogging problems
+should be much less.</span></p>
+<p><span class="partdetail-description">It's possible that the EGR valve or
+intake flap are sticking due to carbon.&nbsp; It's also possible that the EGR
+valve (and its vacuum lines and control solenoid) is bad or the intake flap
+gears are stripped (intake flaps 2004 and newer are electrically actuated and
+use plastic gears).</span></p>
+<h4><span class="partdetail-description">7.&nbsp; </span>It could be the
+MAF air flow sensor contributing to the problem although
+this normally isn't the sole cause.</h4>
+<p>
+See <a href="maf-faq-tdi.htm">1000q: MAF FAQ</a> or <a href="../a4/MAF-sensor-testing-VW-cleaner.htm">1000q:
+MAF testing,</a> replacement and troubleshooting for more details on mk4 and
+newer cars).&nbsp;&nbsp;And see
+<a href="low-power-fix-TDI.htm">1000q: diagnosing constant low power</a> - MAF
+problems could be causing both constant low power and triggering limp mode.&nbsp;
+This problem is common on mk4 and newer cars but rare on mk3 TDI.&nbsp; A bad
+MAF does <u>not</u> normally trip an error code.&nbsp; A bad MAF does not trip
+overboost but could contribute to underboost.</p>
+<h4><span class="partdetail-description">Less common causes of limp mode</span></h4>
+<p>Please join our community today!</p>
+<h4>Rare causes of limp mode</h4>
+<p>Registration is free, post your problem so we can help you fix limp mode.</p>
+<hr>
+<p><b><i><font size="4">...The rest of this article and pictures are in the premium content
+section and <a href="http://www.myturbodiesel.com/forum/f21/less-common-rare-causes-limp-mode-3014/" target="_blank">can
+be viewed in this forum post</a>.&nbsp; Please <a href="http://www.myturbodiesel.com/forum/register.php" target="_blank">join
+our forums</a> for and upgrade your account to premium for only $2 <a href="http://www.myturbodiesel.com/account/upgrades" target="_blank">http://www.myturbodiesel.com/account/upgrades</a> to see less common and rare causes of limp mode! Thank you for your support!</font></i></b></p>
+<p>Do you know of more causes of limp mode?&nbsp; Please add your knowledge by
+posting your case in the <a href="../../forum/index.php">myturbodiesel.com forums</a>,
+thank you!</p>
+
+<?php include("../../footer.php"); ?>
+</html>

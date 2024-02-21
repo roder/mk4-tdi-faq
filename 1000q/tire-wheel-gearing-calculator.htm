@@ -1,0 +1,927 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  "http://www.w3.org/TR/html4/loose.dtd">    
+<html xmlns:fb="http://www.facebook.com/2008/fbml"><head>
+<title>Tire, wheel, gearing calculator with engine rpm, top speed, spacer, and offset information</title>
+<meta name="description" content="Wheel and tire size width offset calculator calculation">
+<meta name="keywords" content=" miata tire calculator, vw tire calculator, audi tire calculator, vw wheel calculator, audi wheel calculator, vw offset calculator">
+<script type="text/javascript" src="123.js"></script>
+<?php include("../header.php"); ?><?php include("../menu.php"); ?>
+    <h1>myturbodiesel.com tire, wheel, offset, and gearing calculator</h1><a href="wheels/oem-vw-audi-wheels-gallery-database.htm">back to 1000q:
+OEM VW Audi wheel gallery and database</a><br>
+<br>
+<b><font size="4">Introduction</font></b>
+
+<h2>
+In addition to the wheel width, sidewall height, overall height, and speedometer difference,
+this calculator also shows change in
+offset and clearance, the effect of spacers, change in track (width or stance), and engine RPM at a given speed for up to 3 new tire/wheel combinations.&nbsp;&nbsp;
+</h2>
+
+<p>
+Hold your mouse over each field for additional instructions on how to use the
+calculator.&nbsp; See the bottom for tire sizing tips, real world vs. calculated
+tire sizes, and VW
+TDI gear ratios.
+</p>
+
+<h3>How to read tire sizes
+</h3>
+
+
+<p>- look for this mark on the outer sidewall<br>
+In this example 205/60/16:<br>
+-205 is the tire width (section width) in mm.&nbsp; This is the overall tire width, not
+    the tread width.<br>
+-60 is the aspect ratio.&nbsp; It gives you the sidewall height as a percentage of the section width.&nbsp;
+60% of 205mm is 123mm sidewall height.<br>
+-R means radial (almost every car tire)<br>
+-16 is the wheel diameter in inches.<br>
+-92H is the service description.&nbsp; 92 is the load rating (the tire can
+support 1389 lbs or 640 kg).&nbsp; H is the speed rating (130 mph rated).<br>
+<img border="0" src="../images/wheels/tire-marking.jpg" width="536" height="271"></p>
+<p><b>Reading wheel size</b> - look for a stamp behind the spokes.&nbsp; In the
+  example below,&nbsp;<br>
+  -width is 8.5&quot;<br>
+  -diameter is 18&quot;<br>
+  -offset (ET) is 45 mm<br>
+  -J is the tire bead profile shape code and H2 is the bead hump profile (double
+  hump): (99.99% of the time, ignore these two).<br>
+  <img border="0" src="../images/wheels/wheelmark.jpg" width="490" height="99">
+</p>
+
+
+         <table border="2" width="1030" cellpadding="2" height="256">
+              <form name="tirecalc" id="tirecalc">
+              <td align="center" colspan="5" height="25" bgcolor="#C0C0C0" width="100%"><b><font size="4">Enter
+                your tire
+                dimensions, wheel offset, and if known, gearing and final drive
+                ratio</font></b></td>
+            <tr>
+              <td width="630" height="23"></td>
+              <td width="100" height="23"><div align="center"><b>Current</b></div></td>
+              <td width="100" height="23"><div align="center"><b>Planned 1</b></div></td>
+              <td width="100" height="23"><div align="center"><b>Planned 2</b></div></td>
+              <td width="100" height="23"><div align="center"><b>Planned 3</b></div></td>
+            </tr>
+            <tr title="the width of the sidewalls, not the tread">
+              <td width="630" height="24"><strong>Tire width (section width)<font size="1"> (mm):</font></strong></td>
+              <td width="100" height="24"><SELECT name="Sctwdth_1" onChange="calctire()"> 
+              	<option value=145>145
+					<option value=155>155
+					<option value=165>165
+					<option value=175>175
+					<option value=185>185
+					<option value=195>195
+					<option selected value=205>205
+					<option value=215>215
+					<option value=225>225
+					<option value=235>235
+					<option value=245>245
+					<option value=255>255
+					<option value=265>265
+					<option value=275>275
+					<option value=285>285
+					<option value=295>295
+					<option value=305>305
+					<option value=315>315
+					<option value=325>325
+					<option value=335>335
+					<option value=345>345
+					<option value=355>355
+					<option value=365>365
+					<option value=375>375
+				</SELECT> 
+		       <td width="100" height="24"><SELECT name="Sctwdth_2" onChange="calctire()"> 
+					<option value=145>145
+					<option value=155>155
+					<option value=165>165
+					<option value=175>175
+					<option value=185>185
+					<option value=195>195
+					<option selected value=205>205
+					<option value=215>215
+					<option value=225>225
+					<option value=235>235
+					<option value=245>245
+					<option value=255>255
+					<option value=265>265
+					<option value=275>275
+					<option value=285>285
+					<option value=295>295
+					<option value=305>305
+					<option value=315>315
+					<option value=325>325
+					<option value=335>335
+					<option value=345>345
+					<option value=355>355
+					<option value=365>365
+					<option value=375>375
+				</SELECT> 
+				</td>
+                <td width="100" height="24"><SELECT name="Sctwdth_3" onChange="calctire()"> 
+					<option value=145>145
+					<option value=155>155
+					<option value=165>165
+					<option value=175>175
+					<option value=185>185
+					<option value=195>195
+					<option selected value=205>205
+					<option value=215>215
+					<option value=225>225
+					<option value=235>235
+					<option value=245>245
+					<option value=255>255
+					<option value=265>265
+					<option value=275>275
+					<option value=285>285
+					<option value=295>295
+					<option value=305>305
+					<option value=315>315
+					<option value=325>325
+					<option value=335>335
+					<option value=345>345
+					<option value=355>355
+					<option value=365>365
+					<option value=375>375
+				</SELECT> 
+				</td>
+                <td width="100" height="24"><SELECT name="Sctwdth_4" onChange="calctire()"> 
+					<option value=145>145
+					<option value=155>155
+					<option value=165>165
+					<option value=175>175
+					<option value=185>185
+					<option value=195>195
+					<option selected value=205>205
+					<option value=215>215
+					<option value=225>225
+					<option value=235>235
+					<option value=245>245
+					<option value=255>255
+					<option value=265>265
+					<option value=275>275
+					<option value=285>285
+					<option value=295>295
+					<option value=305>305
+					<option value=315>315
+					<option value=325>325
+					<option value=335>335
+					<option value=345>345
+					<option value=355>355
+					<option value=365>365
+					<option value=375>375
+				</SELECT> 
+				</td>
+            </tr>
+            <tr title="sidewall height as a percentage of the section width">
+              <td width="630" height="24"><strong>Tire aspect ratio<font size="1"> (percent):</font></strong></a></td>
+              <td width="100" height="24"><select name="Aspctratio_1" onChange="calctire()"> 
+					<option value=25>25
+					<option value=30>30
+					<option value=35>35
+					<option value=40>40
+					<option value=45>45
+					<option value=50>50
+					<option selected value=55>55
+					<option value=60>60
+					<option value=65>65
+					<option value=70>70
+					<option value=75>75
+					<option value=80>80
+					<option value=85>85
+					<option value=90>90
+					<option value=95>95
+				</select>
+				<td width="100" height="24"><select name="Aspctratio_2" onChange="calctire()"> 
+					<option value=25>25
+					<option value=30>30
+					<option value=35>35
+					<option value=40>40
+					<option value=45>45
+					<option value=50>50
+					<option selected value=55>55
+					<option value=60>60
+					<option value=65>65
+					<option value=70>70
+					<option value=75>75
+					<option value=80>80
+					<option value=85>85
+					<option value=90>90
+					<option value=95>95
+				</select>
+				<td width="100" height="24"><select name="Aspctratio_3" onChange="calctire()"> 
+					<option value=25>25
+					<option value=30>30
+					<option value=35>35
+					<option value=40>40
+					<option value=45>45
+					<option value=50>50
+					<option selected value=55>55
+					<option value=60>60
+					<option value=65>65
+					<option value=70>70
+					<option value=75>75
+					<option value=80>80
+					<option value=85>85
+					<option value=90>90
+					<option value=95>95
+				</select>
+				<td width="100" height="24"><select name="Aspctratio_4" onChange="calctire()"> 
+					<option value=25>25
+					<option value=30>30
+					<option value=35>35
+					<option value=40>40
+					<option value=45>45
+					<option value=50>50
+					<option selected value=55>55
+					<option value=60>60
+					<option value=65>65
+					<option value=70>70
+					<option value=75>75
+					<option value=80>80
+					<option value=85>85
+					<option value=90>90
+					<option value=95>95
+				</select>
+            </a></tr>
+            <tr title="in inches">
+              <td width="630" height="24"><strong>Wheel diameter<font size="1"> (inches):</font></strong></td>
+              <td width="100" height="24"><select name="WD1" onChange="calctire()"> 
+					<option value=13>13
+					<option value=14>14
+					<option value=15>15
+					<option selected value=16>16
+					<option value=17>17
+					<option value=18>18
+					<option value=19>19
+					<option value=20>20
+					<option value=21>21
+					<option value=22>22
+					<option value=23>23
+					<option value=24>24
+					<option value=25>25
+					<option value=26>26
+				</select>
+				<td width="100" height="24"><select name="WD2" onChange="calctire()"> 
+					<option value=13>13
+					<option value=14>14
+					<option value=15>15
+					<option selected value=16>16
+					<option value=17>17
+					<option value=18>18
+					<option value=19>19
+					<option value=20>20
+					<option value=21>21
+					<option value=22>22
+					<option value=23>23
+					<option value=24>24
+					<option value=25>25
+					<option value=26>26
+				</select>
+				<td width="100" height="24"><select name="WD3" onChange="calctire()"> 
+					<option value=13>13
+					<option value=14>14
+					<option value=15>15
+					<option selected value=16>16
+					<option value=17>17
+					<option value=18>18
+					<option value=19>19
+					<option value=20>20
+					<option value=21>21
+					<option value=22>22
+					<option value=23>23
+					<option value=24>24
+					<option value=25>25
+					<option value=26>26
+				</select>
+				<td width="100" height="24"><select name="WD4" onChange="calctire()"> 
+					<option value=13>13
+					<option value=14>14
+					<option value=15>15
+					<option selected value=16>16
+					<option value=17>17
+					<option value=18>18
+					<option value=19>19
+					<option value=20>20
+					<option value=21>21
+					<option value=22>22
+					<option value=23>23
+					<option value=24>24
+					<option value=25>25
+					<option value=26>26
+				</select>
+            </tr>
+            <tr title="in inches">
+              <td width="630" height="24"><strong>Wheel width<font size="1"> (inches):</font></strong></td>
+           	 <td width="100" height="24"><select name="WwdthIN_1" onChange="calctire()"> 
+					<option value=4.5>4.5
+					<option value=5>5
+					<option value=5.5>5.5
+					<option value=6>6
+					<option selected value=6.5>6.5
+					<option value=7>7
+					<option value=7.5>7.5
+					<option value=8>8
+					<option value=8.5>8.5
+					<option value=9>9					
+					<option value=9.5>9.5
+					<option value=10>10
+					<option value=10.5>10.5
+					<option value=11>11
+					<option value=11.5>11.5
+					<option value=12>12
+					<option value=12.5>12.5
+					<option value=13>13
+					<option value=13.5>13.5
+					<option value=14>14
+					<option value=14.5>14.5
+					<option value=15>15
+				</select>
+				<td width="100" height="24"><select name="WwdthIN_2" onChange="calctire()"> 
+					<option value=4.5>4.5
+					<option value=5>5
+					<option value=5.5>5.5
+					<option value=6>6
+					<option selected value=6.5>6.5
+					<option value=7>7
+					<option value=7.5>7.5
+					<option value=8>8
+					<option value=8.5>8.5
+					<option value=9>9					
+					<option value=9.5>9.5
+					<option value=10>10
+					<option value=10.5>10.5
+					<option value=11>11
+					<option value=11.5>11.5
+					<option value=12>12
+					<option value=12.5>12.5
+					<option value=13>13
+					<option value=13.5>13.5
+					<option value=14>14
+					<option value=14.5>14.5
+					<option value=15>15
+				</select>
+				<td width="100" height="24"><select name="WwdthIN_3" onChange="calctire()"> 
+					<option value=4.5>4.5
+					<option value=5>5
+					<option value=5.5>5.5
+					<option value=6>6
+					<option selected value=6.5>6.5
+					<option value=7>7
+					<option value=7.5>7.5
+					<option value=8>8
+					<option value=8.5>8.5
+					<option value=9>9					
+					<option value=9.5>9.5
+					<option value=10>10
+					<option value=10.5>10.5
+					<option value=11>11
+					<option value=11.5>11.5
+					<option value=12>12
+					<option value=12.5>12.5
+					<option value=13>13
+					<option value=13.5>13.5
+					<option value=14>14
+					<option value=14.5>14.5
+					<option value=15>15
+				</select>
+				<td width="100" height="24"><select name="WwdthIN_4" onChange="calctire()"> 
+					<option value=4.5>4.5
+					<option value=5>5
+					<option value=5.5>5.5
+					<option value=6>6
+					<option selected value=6.5>6.5
+					<option value=7>7
+					<option value=7.5>7.5
+					<option value=8>8
+					<option value=8.5>8.5
+					<option value=9>9					
+					<option value=9.5>9.5
+					<option value=10>10
+					<option value=10.5>10.5
+					<option value=11>11
+					<option value=11.5>11.5
+					<option value=12>12
+					<option value=12.5>12.5
+					<option value=13>13
+					<option value=13.5>13.5
+					<option value=14>14
+					<option value=14.5>14.5
+					<option value=15>15
+				</select>
+            </tr>
+              <tr title="if you don't know your wheel offset then leave these all the same">
+              <td width="630" height="23"><strong>Wheel offset/ ET<font size="1"> 
+                (mm):</font></strong></td>
+              <td width="100" height="23"><div align="left">
+                  <input name="offsetIN_1" type="text" value="50" size="3"  maxlength=3 onchange="calctire()" class="memberTextBoxes" />
+                </div></td>
+              <td width="100" height="23"><div align="left">
+                  <input name="offsetIN_2" type="text" value="50" size="3"  maxlength=3 onchange="calctire()" class="memberTextBoxes" />
+                </div></td>
+                <td width="100" height="23"><div align="left">
+                  <input name="offsetIN_3" type="text" value="50" size="3"  maxlength=3 onchange="calctire()" class="memberTextBoxes" />
+                </div></td>
+					<td width="100" height="23"><div align="left">
+                  <input name="offsetIN_4" type="text" value="50" size="3"  maxlength=3 onchange="calctire()" class="memberTextBoxes" />
+                </div></td>
+
+              </tr>
+              <tr title="if you're not using wheel spacers leave this blank">
+              <td width="630" height="23"><strong>Wheel spacer thickness<font size="1">
+                (mm):</font></strong></td>
+              <td width="100" height="23"><div align="left">
+                  <input name="spacerIN_1" type="text" value="0" size="3"  maxlength=3 onchange="calctire()" class="memberTextBoxes" />
+                </div></td>
+              <td width="100" height="23"><div align="left">
+                  <input name="spacerIN_2" type="text" value="0" size="3"  maxlength=3 onchange="calctire()" class="memberTextBoxes" />
+                </div></td>
+                <td width="100" height="23"><div align="left">
+                  <input name="spacerIN_3" type="text" value="0" size="3"  maxlength=3 onchange="calctire()" class="memberTextBoxes" />
+                </div></td>
+					<td width="100" height="23"><div align="left">
+                  <input name="spacerIN_4" type="text" value="0" size="3"  maxlength=3 onchange="calctire()" class="memberTextBoxes" />
+                </div></td>
+
+              </tr>
+              <tr title="if not known then ignore these values and the engine/gearing output boxes below">
+              <td width="630" height="25"><strong>Gear ratios:</strong></td>
+              <td width="400" colspan="4" height="25">Top gear<font size="1"> </font>ratio <input name="trans_ratio" type="text" value=".756" size="4" maxlength=4 onchange="calctire()" class="memberTextBoxes" />&nbsp;&nbsp;Final drive
+              <input name="diff_ratio" type="text" value="3.389"  maxlength=5 size="5" onchange="calctire()" class="memberTextBoxes" />&nbsp;</td>
+
+              </tr>
+
+</table>
+&nbsp;
+<p>
+<input type="reset" value="Reset Values"> 
+</p>
+<Table width="1030" border="2" cellpadding="2">
+              <td width="100%" colspan="5" bgcolor="#C0C0C0">
+                <p align="center"><b><font size="4">Output</font></b></td>
+            <tr>
+              <td width="630"></td>
+              <td width="100"><div align="center"><b>Current</b></div></td>
+              <td width="100"><div align="center"><b>Planned 1</b></div></td>
+              <td width="100"><div align="center"><b>Planned 2</b></div></td>
+              <td width="100"><div align="center"><b>Planned 3</b></div></td>
+            </tr>
+            <tr title="distance from the wheel rim to the outer diameter of the tire">
+              <td width="630"><strong>Sidewall height </strong><b><font size="1"> (inches):</font></b></td>
+              <td width="100"><div align="center">
+                  <input name="sidew_1" type="text"  size="6"  class="memberTextBoxes" />
+                </div></td>
+              <td width="100"><div align="center">
+                  <input name="sidew_2" type="text"  size="6"  class="memberTextBoxes" />
+                </div></td>
+                <td width="100"><div align="center">
+                  <input name="sidew_3" type="text"  size="6"  class="memberTextBoxes" />
+                </div></td>
+                <td width="100"><div align="center">
+                  <input name="sidew_4" type="text"  size="6"  class="memberTextBoxes" />
+                </div></td>
+            </tr>
+            <tr title="this is the overall height/diameter of the wheel and tire ">
+              <td width="630"><strong>Wheel/tire overall height </strong><b><font size="1"> (inches):</font></b></td>
+              <td width="100"><div align="center">
+                  <input name="TrHgt_1" type="text"  size="6"  class="memberTextBoxes" />
+                </div></td>
+              <td width="100"><div align="center">
+                  <input name="TrHgt_2" type="text"  size="6"  class="memberTextBoxes" />
+                </div></td>
+                <td width="100"><div align="center">
+                  <input name="TrHgt_3" type="text"  size="6"  class="memberTextBoxes" />
+                </div></td>
+                <td width="100"><div align="center">
+                  <input name="TrHgt_4" type="text"  size="6"  class="memberTextBoxes" />
+                </div></td>
+            </tr>
+            <tr title="Half of the change in wheel/tire diameter/height is below the wheel and raises/lowers the car and ground clearance.">
+              <td width="630"><strong>Ride height change <font size="1">(inches):</font></strong></td>
+              <td width="100"></td>
+              <td width="100"><div align="center">
+                  <input name="RH_2" type="text"  size="6"  class="memberTextBoxes" />
+                </div></td>
+                <td width="100"><div align="center">
+                  <input name="RH_3" type="text"  size="6"  class="memberTextBoxes" />
+                </div></td>
+                <td width="100"><div align="center">
+                  <input name="RH_4" type="text"  size="6"  class="memberTextBoxes" />
+                </div></td>
+            </tr>
+            <tr title="in inches">
+              <td width="630"><strong>Tire width change <font size="1">(inches):</font></strong></td>
+              <td width="100"></td>
+              <td width="100"><div align="center">
+                  <input name="Twdth_2" type="text"  size="6"  class="memberTextBoxes" />
+                </div></td>
+                <td width="100"><div align="center">
+                  <input name="Twdth_3" type="text"  size="6"  class="memberTextBoxes" />
+                </div></td>
+                <td width="100"><div align="center">
+                  <input name="Twdth_4" type="text"  size="6"  class="memberTextBoxes" />
+                </div></td>
+            </tr>
+            <tr title="a larger diameter tire will have outer circumference / rolling diameter.  This calculated value may be different than actual value depending on tire design/inflation">
+              <td width="630"><strong>Tire outer circumference <font size="1">(inches):</font></strong></td>
+              <td width="100"><div align="center">
+                  <input name="circum_1" type="text"  size="6"  class="memberTextBoxes" />
+                </div></td>
+              <td width="100"><div align="center">
+                  <input name="circum_2" type="text"  size="6"  class="memberTextBoxes" />
+                </div></td>
+                <td width="100"><div align="center">
+                  <input name="circum_3" type="text"  size="6"  class="memberTextBoxes" />
+                </div></td>
+                <td width="100"><div align="center">
+                  <input name="circum_4" type="text"  size="6"  class="memberTextBoxes" />
+                </div></td>
+            </tr>
+            <tr>
+              <td width="630"><strong>Wheel diameter change<font size="1"> (inches):</font></strong></td>
+              <td width="100"></td>
+              <td width="100"><div align="center">
+                  <input name="wheel_diameter_2" type="text"  size="6"  class="memberTextBoxes" />
+                </div></td>
+                <td width="100"><div align="center">
+                  <input name="wheel_diameter_3" type="text"  size="6"  class="memberTextBoxes" />
+                </div></td>
+                <td width="100"><div align="center">
+                  <input name="wheel_diameter_4" type="text"  size="6"  class="memberTextBoxes" />
+                </div></td>
+            </tr>
+            <tr>
+              <td width="630"><strong>Wheel width change<font size="1"> (inches):</font></strong></td>
+              <td width="100"></td>
+              <td width="100"><div align="center">
+                  <input name="Wwdth_2" type="text"  size="6"  class="memberTextBoxes" />
+                </div></td>
+                <td width="100"><div align="center">
+                  <input name="Wwdth_3" type="text"  size="6"  class="memberTextBoxes" />
+                </div></td>
+                <td width="100"><div align="center">
+                  <input name="Wwdth_4" type="text"  size="6"  class="memberTextBoxes" />
+                </div></td>
+            </tr>
+            <tr title="this value includes any spacers if you input them earlier.  Spacers cause the wheel to stick out further, decreasing positive wheel offset and increasing negative offset">
+              <td width="630"><strong>Wheel offset change<font size="1"> 
+                (mm):</font></strong></td>
+              <td width="100"></td>
+              <td width="100"><div align="center">
+                  <input name="offset_2" type="text"  size="6"  class="memberTextBoxes" />
+                </div></td>
+                <td width="100"><div align="center">
+                  <input name="offset_3" type="text"  size="6"  class="memberTextBoxes" />
+                </div></td>
+                <td width="100"><div align="center">
+                  <input name="offset_4" type="text"  size="6"  class="memberTextBoxes" />
+                </div></td>
+            </tr>
+            <tr title="a positive number is less clearance on the inside face of the wheel, negative is more clearance">
+              <td width="630"><strong>Wheel/tire inboard clearance <font size="1">(positive
+                is less clearance, negative is more clearance.&nbsp; inches):</font></strong></td>
+              <td width="100"></td>
+              <td width="100"><div align="center">
+                  <input name="TW_inboard_2" type="text"   size="6" class="memberTextBoxes" />
+                </div></td>
+                <td width="100"><div align="center">
+                  <input name="TW_inboard_3" type="text"   size="6" class="memberTextBoxes" />
+                </div></td>
+                <td width="100"><div align="center">
+                  <input name="TW_inboard_4" type="text"   size="6" class="memberTextBoxes" />
+                </div></td>
+            </tr>
+            <tr title="a positive number is the wheel sticking beyond the fender more, negative is tucked in towards the car">
+              <td width="630"><strong>Wheel/tire outboard movement <font size="1">(positive
+                is sticking out, negative is tucked in.&nbsp; inches):</font></strong></td>
+              <td width="100"></td>
+              <td width="100"><div align="center">
+                  <input name="TW_outboard_2" type="text"   size="6" class="memberTextBoxes" />
+                </div></td>
+                <td width="100"><div align="center">
+                  <input name="TW_outboard_3" type="text"   size="6" class="memberTextBoxes" />
+                </div></td>
+                <td width="100"><div align="center">
+                  <input name="TW_outboard_4" type="text"   size="6" class="memberTextBoxes" />
+                </div></td>
+            </tr>
+            <tr title="total track change from the driver to the passenger side">
+              <td width="630"><strong>Wheel/tire stance<font size="1">  ( inches):</font></strong></td>
+              <td width="100"></td>
+              <td width="100"><div align="center">
+                  <input name="track_width_2" type="text"  size="6"  class="memberTextBoxes" />
+                </div></td>
+                 <td width="100"><div align="center">
+                  <input name="track_width_3" type="text"  size="6"  class="memberTextBoxes" />
+                </div></td>
+                 <td width="100"><div align="center">
+                  <input name="track_width_4" type="text"  size="6"  class="memberTextBoxes" />
+                </div></td>
+            </tr>
+            <tr title="this number does not account for any inherent speedometer error">
+              <td width="630"><b>At an indicated <input name="speed_mph" type="text" maxlength=3 value="70" size="3"  onchange="calctire()" class="memberTextBoxes" />
+                mph on the speedometer, the actual speed is:</b></td>
+                <td width="100">&nbsp;</td>
+                <td width="100"><div align="center">
+                  <input name="speed_2" type="text"  size="6"  class="memberTextBoxes" />
+                </div></td>
+                <td width="100"><div align="center">
+                  <input name="speed_3" type="text"  size="6"  class="memberTextBoxes" />
+                </div></td>
+                <td width="100"><div align="center">
+                  <input name="speed_4" type="text"  size="6"  class="memberTextBoxes" />
+                </div></td>
+            </tr>
+            <tr title="positive is fast, negative is slow.  This number does not account for any inherent speedometer error">
+              <td width="630"><strong>% speedometer error with new tire/wheel<font size="1">:</font></strong></td>
+              <td width="100"><div align="center">
+                </div></td>
+              <td width="100"><div align="center">
+                  <input name="speedo_2" type="text"  size="6"  class="memberTextBoxes" />
+                </div></td>
+                <td width="100"><div align="center">
+                  <input name="speedo_3" type="text"  size="6"  class="memberTextBoxes" />
+                </div></td>
+                <td width="100"><div align="center">
+                  <input name="speedo_4" type="text"  size="6"  class="memberTextBoxes" />
+                </div></td>
+            </tr>
+            <tr>
+              <td width="1030" colspan="5" bgcolor="#C0C0C0">
+                <p align="center"><b>Engine - gearing output</b></td>
+            </tr>
+            <tr title="input the correct gear/final drive ratio for your car for this number to be correct">
+              <td width="630"><strong>Engine RPM at indicated speed:<br>
+                <type /><font size="1">(must input
+                correct gear/final drive ratio above for correct output here)</font></strong></td>
+              <td width="100"><div align="center">
+                  <input name="engine_rpm_1" type="text"  size="4"  class="memberTextBoxes" />
+                </div></td>
+              <td width="100"><div align="center">
+                  <input name="engine_rpm_2" type="text"  size="4"  class="memberTextBoxes" />
+                </div></td>
+                <td width="100"><div align="center">
+                  <input name="engine_rpm_3" type="text"  size="4"  class="memberTextBoxes" />
+                </div></td>
+                <td width="100"><div align="center">
+                  <input name="engine_rpm_4" type="text"  size="4"  class="memberTextBoxes" />
+                </div></td>
+            </tr>
+            <tr title="this only needs the correct final drive ratio for your car to be correct">
+              <td width="630"><strong>Effective final drive ratio with new tire/wheel
+                combination<font size="1">:</font></strong></td>
+              <td width="100"><div align="center">
+                  <input name="gearing_1" type="text"  size="5"  class="memberTextBoxes" />
+                </div></td>
+              <td width="100"><div align="center">
+                  <input name="gearing_2" type="text"  size="5"  class="memberTextBoxes" />
+                </div></td>
+                <td width="100"><div align="center">
+                  <input name="gearing_3" type="text"  size="5"  class="memberTextBoxes" />
+                </div></td>
+                <td width="100"><div align="center">
+                  <input name="gearing_4" type="text" size="5"  class="memberTextBoxes" />
+                </div></td>
+            </tr>
+            <tr title="this is indicated mph, not actual mph.  For this number to be correct, you must input the correct gear/final drive ratio for your car.  It does not take into account aerodynamics, tire speed rating, or horsepower.  It is calculated from tire rolling diameter, gearing, and engine redline.">
+              <td width="630"><b>Theoretical top speed with <input name="redline" maxlength=4 type="text" value="5000" size="4"  onchange="calctire()" class="memberTextBoxes" />redline<font size="1">&nbsp;</font></b><strong><font size="1">
+                ( </font></strong><b><font size="1">indicated mph):</font></b></td>
+                <td width="100"><div align="center">
+                  <input name="topspeed_1" type="text" size="4"  class="memberTextBoxes" />
+                </div></td>
+                <td width="100"><div align="center">
+                  <input name="topspeed_2" type="text" size="4"  class="memberTextBoxes" />
+                </div></td>
+                <td width="100"><div align="center">
+                  <input name="topspeed_3" type="text" size="4"  class="memberTextBoxes" />
+                </div></td>
+                <td width="100"><div align="center">
+                  <input name="topspeed_4" type="text" size="4"  class="memberTextBoxes" />
+                </div></td>
+            </tr>
+         </form>
+        </table>
+  <script language="JavaScript" type="text/javascript">
+	       </script>
+<hr>
+<h3>More wheel and tire size tips
+</h3>
+
+<p>
+In general, it's suggested to keep the overall wheel/tire height and width the same to make sure the
+new tire fits correctly.&nbsp;
+VW TDI are somewhat low to the ground and the the odometer/speedometer tend to
+read fast so my personal preference is to upsize the tire aspect ratio by 1 size
+larger.&nbsp;
+This will also slightly increase gearing, increasing fuel economy and fixing the common "my speedometer reads too high" problem on
+VWs.&nbsp;
+This is a common problem on German cars because they are not allowed to read slow but are allowed to read slightly fast.&nbsp;
+If you have a mk4 VW you can remove the instrument cluster and manually move the
+needle to adjust it.&nbsp; See <a href="a4/instrument-cluster-remove.htm">1000q:
+mk4 instrument cluster removal</a> for tips.&nbsp; If you have a mk5 VW you can
+adjust the speedometer through the distance impulse setting.&nbsp; See <a href="a5/speedometer-read-fast-adjustment-VW.htm">1000q:
+mk5 speedometer correction</a> for details and <a href="a5/instrument-cluster-removal-jetta-golf.htm">1000q:
+mk5/6 instrument cluster removal</a>.
+</p>
+
+<p>Many German cars tend to have a decent amount of wheel gap between the wheel and fender which allows for
+slightly upsizing tires.&nbsp; Some space isn't a bad thing because tire rubbing on the autobahn at
+140 mph could lead to catastrophic tire
+failure.&nbsp; Unless the new tire/wheel tires rub on the fenders during hard
+cornering or big bumps it shouldn't be a problem.&nbsp; Always check for adequate clearance on the inside and outside faces of the
+wheel/tire against the brake rotor/caliper, brake lines, suspension arms, fender
+lip, fuel filler neck, or wheel
+well liners!&nbsp; Since the fuel filler neck is only on one side, make sure to
+check that side for inside wheel clearance.</p>
+<p>The suspenion should be in the resting and compressed positions when checking wheel and tire clearance. If you jack up the car, the suspension will be hanging and the tires will usually move a few mm closer to the strut. When tire clearance is so tight, differences between different tire models can make a difference.</p>
+
+<p>  <b>  Note</b> - tire width is not the same as tread contact patch width!&nbsp;
+Tire section width
+is measured at the widest point when mounted on a specific design (test sizing)
+wheel.&nbsp; Contact patch width varies by tire model and even
+size because they have different sidewall shapes and tread patterns for
+different sizes.&nbsp; Tire contact patch size also varies according to loading (weight on that
+corner) and tire pressure.&nbsp; Two different models or aspect ratios of the same tire with
+the same section width may have different &quot;actual widths&quot;.&nbsp; This
+will result in actual clearance being slightly off what is calculated
+here.&nbsp; For example,
+one tire could be constructed to have a square sidewall profile where the entire width is tread
+and the other could have a rounder sidewall profile where only 75% of the width is
+tread.&nbsp; Look at the tire in person or find the specs online before buying a tire.</p>
+
+<h4><img border="0" src="../images/wheel-offset.png" align="right" width="685" height="678">What is
+wheel offset and how does it affect tire poke and brake clearance?</h4>
+
+<p>Offset is the distance in millimeters from the mounting surface of the wheel hub to the centerline
+of the wheel width.&nbsp; It's usually marked as ET or Einpresstiefe (German for
+insertion depth or press in depth).&nbsp; To the right is a cutaway diagram that
+should help explain it.&nbsp; If you play with the calculator it will show you how inside clearance
+      changes according to positive/negative offset, wheel width, and spacers.&nbsp;
+Wheel hub spacers will
+ make the wheels poke out. Subtract the spacer thickness from positive offset and add the spacer thickness to the absolute value of negative offset when manually calculating their effect.  Always make sure the lug
+ bolts or studs are long enough when using spacers.</p>
+
+<p>If the offset is wrong the wheel could interfere with the brake calipers, rotors, brake or fuel lines,
+      the suspension, or the fenders.&nbsp; Inner wheel clearance depends on
+spoke and wheel design as well.&nbsp; Tire choice also effects if the wheel/tire
+combo will fit on the car.&nbsp; If it sticks out too far
+then handling characteristics will change and the tires will
+fling
+road debris all over the sides and behind the car.&nbsp; Wider wheels may
+require a change in offset due to clearance.</p>
+
+<p>On many cars, assuming the same wheel/tire width, a +/- 5 change in offset
+      usually won't do anything
+but +/- 10 is a difference of 10mm and it will be more noticeable.&nbsp;
+In addition to using the calculator above, look at your current wheels to see if
+there's a difference in front vs. rear wheel hubs and inside clearance.</p>
+
+<p> A new wheel of the same width
+should have about the same offset as your old wheel.&nbsp; Everything else being
+equal:<br>
+-Cars with
+positive offset (all modern VW and Audi that I can think of) - the lower the offset the more the wheels stick out.<br>
+-Cars with negative offset - the lower the offset (the higher the absolute
+value, if you don't remember your math -50 has a lower value but higher absolute
+value than -30) the less the wheels will stick out.</p>
+
+      <p>Below is a picture of  stock mk5 Jetta wheels with positive offset 50 and
+      new wheels with offset 37 showing the difference between front and rear
+      offsets.&nbsp; Rear before: the stock wheel is tucked in
+      slightly in the fender.&nbsp; Rear after: the new wheel is flush with the
+      fender because it has a lower positive offset.&nbsp; Front after: the
+front wheel sticks out beyond the fender because the front wheel hub sticks out farther
+      than the rear wheel hub.</p>
+
+      <p><img border="0" src="../images/wheels/offset1.jpg" width="500" height="602">
+      </p>
+<hr>
+<table border="1" width="1030" cellpadding="2">
+  <tr>
+    <td colspan="5" width="100%" height="23" bgcolor="#C0C0C0">
+      <p align="center"><b><font size="4">Final drive and top gear ratios for
+      Volkswagen TDI</font></b></td>
+  </tr>
+  <tr>
+    <td height="44" width="100%">&nbsp;</td>
+    <td height="44" width="100">Manual transmission final drive</td>
+    <td height="44" width="100">Manual transmission top gear</td>
+    <td height="44" width="100">Automatic transmission final drive</td>
+    <td height="44" width="100">Automatic transmission top gear</td>
+  </tr>
+  <tr>
+    <td colspan="5" height="22" width="100%">
+      <p align="left"><b>mk3</b>      </p>
+    </td>
+  </tr>
+  <tr>
+    <td height="22" width="100%">Jetta/Passat 1.9L 90hp engine w/ 02a transmission,
+      model CTN</td>
+    <td height="22" width="100">3.157</td>
+    <td height="22" width="100">.755</td>
+    <td height="22" width="100">-</td>
+    <td height="22" width="100">-</td>
+  </tr>
+  <tr>
+    <td colspan="5" height="22" width="100%">
+      <p align="left"><b>mk4</b>    </td>
+  </tr>
+  <tr>
+    <td height="44" width="100%">Jetta/Golf 1.9L 90hp engine w/02j
+      transmission, model DQY, EBJ, and EGR&nbsp;</td>
+    <td height="44" width="100"> 3.389</td>
+    <td height="44" width="100">&nbsp;.756</td>
+    <td height="44" width="100">-</td>
+    <td height="44" width="100">-</td>
+  </tr>
+  <tr>
+    <td height="44" width="100%">New Beetle 1.9L engine w/4 speed auto</td>
+    <td height="44" width="100"> </td>
+    <td height="44" width="100"></td>
+    <td height="44" width="100">3.2</td>
+    <td height="44" width="100">.742</td>
+  </tr>
+  <tr>
+    <td height="44" width="100%">Jetta/Golf 1.9L 90hp engine w/01m
+      transmission, model DMP, ECN, ELT, EPB, EPP, and FDB</td>
+    <td height="44" width="100">-</td>
+    <td height="44" width="100">-</td>
+    <td height="44" width="100">3.7</td>
+    <td height="44" width="100">.742</td>
+  </tr>
+  <tr>
+    <td height="22" width="100%">Jetta/Golf 1.9L 100hp engine w/01m
+      transmission, model EUH&nbsp;</td>
+    <td height="22" width="100">3.389</td>
+    <td height="22" width="100">.744</td>
+    <td height="22" width="100">-</td>
+    <td height="22" width="100">-</td>
+  </tr>
+  <tr>
+    <td height="22" width="100%">Passat 2.0L 138hp engine w/ 01v transmission, model GMR&nbsp;</td>
+    <td height="22" width="100">-</td>
+    <td height="22" width="100">-</td>
+    <td height="22" width="100">?</td>
+    <td height="22" width="100">?</td>
+	<tr>
+    <td colspan="5" height="22" width="100%">
+      <p align="left"><b>mk5-mk6</b></td>
+    </tr>
+
+  <tr>
+    <td height="22" width="100%">2005.5-2006 Jetta 1.9L 100hp w/ 0a4 transmission,
+      model GQQ</td>
+    <td height="22" width="100">3.389</td>
+    <td height="22" width="100">.769 (might be .74)</td>
+    <td height="22" width="100">&nbsp;-</td>
+    <td height="22" width="100">&nbsp;-</td>
+  </tr>
+  <tr>
+    <td height="22" width="100%">2005.5-2006 Jetta 1.9L 100hp w/ DSG transmission</td>
+    <td height="22" width="100">-</td>
+    <td height="22" width="100">-</td>
+    <td height="22" width="100">3.33</td>
+    <td height="22" width="100">.91 (might be .76)</td>
+  </tr>
+  <tr>
+    <td height="22" width="100%">2009 Jetta/Golf 2.0L140hp engine w/ 6 speed manual
+      transmission</td>
+    <td height="22" width="100">2.76</td>
+    <td height="22" width="100"> .81</td>
+    <td height="22" width="100">-</td>
+    <td height="22" width="100">-</td>
+  </tr>
+  <tr>
+    <td height="22" width="100%">2009 Jetta/Golf 2.0L140hp engine w/ DSG transmission</td>
+    <td height="22" width="100">-</td>
+    <td height="22" width="100">-</td>
+    <td height="22" width="100">3.04</td>
+    <td height="22" width="100">.756</td>
+  </tr>
+  <tr>
+    <td height="22" width="100%">2010-12 Jetta/Golf 2.0L140hp engine w/ 6 speed manual
+      transmission</td>
+    <td height="22" width="100">2.76</td>
+    <td height="22" width="100">.717</td>
+    <td height="22" width="100">-</td>
+    <td height="22" width="100">-</td>
+  </tr>
+  <tr>
+    <td height="22" width="100%">2010-12 Jetta /Golf 2.0L140hp engine w/ DSG transmission</td>
+    <td height="22" width="100">-</td>
+    <td height="22" width="100">-</td>
+    <td height="22" width="100">3.04</td>
+    <td height="22" width="100">.756</td>
+  </tr>
+  <tr>
+    <td height="22" width="100%">2012 Passat TDI w/6 speed manual 140hp engine</td>
+    <td height="22" width="100">2.92</td>
+    <td height="22" width="100">.72</td>
+    <td height="22" width="100">?</td>
+    <td height="22" width="100">?</td>
+  </tr>
+</table>
+<p>*NOTE: VW USA's website shows the 2009 manual transmission gear ratios for the 2012 Sportwagen but this is most likely a mistake. The gear ratios should be the 2010+ ratios.</p>
+<p>Have more questions on what wheels or tires will fit on your
+TDI?&nbsp; Please ask in the <a href="../forum/index.php">TDI forums</a>.</p>
+<?php include("../footer.php"); ?>
+</html>

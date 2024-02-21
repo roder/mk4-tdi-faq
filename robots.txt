@@ -1,0 +1,11 @@
+User-agent: *
+Disallow: /account/
+Disallow: /goto/
+Disallow: /login/
+Disallow: /search/
+Disallow: /members/
+Disallow: /admin.php
+Disallow: /business/directory
+Allow: /
+
+Sitemap: https://www.myturbodiesel.com/sitemap.xml

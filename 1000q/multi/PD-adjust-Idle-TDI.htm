@@ -1,0 +1,156 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  "http://www.w3.org/TR/html4/loose.dtd">  
+<html xmlns:fb="http://www.facebook.com/2008/fbml"><head>
+<title>How to adjust rough idle and camshaft timing on VW and Audi TDI pumpe duse engine</title>
+<meta name="description" content="Fixing rough idle from camshaft timing on Audi and VW TDI PD engines">
+<meta name="keywords" content="TDI, MAF, MAS, air flow sensor,rough idle, pd, camshaft, vw, audi">
+<?php include("../../header.php"); ?>
+<?php include("../../menu.php"); ?>
+
+<h1>How to fine tune camshaft timing (torsion
+value) on PD TDI engines</h1>
+<p><b><font size="4">Introduction</font></b></p>
+<h2>This article shows how to fine tune the camshaft timing on a TDI engine with
+pumpe duse.&nbsp; Shown is a 2006 VW Jetta TDI but other SOHC engines are the
+same.</h2>
+<p>If you're not sure if your engine is pumpe duse, see <a href="../pumpedusedesc.htm">1000q:
+pumpe duse vs. common rail and direct injection</a>.&nbsp; All TDI model year
+2004 -2008 sold in North America were pumpe duse.&nbsp; The crankshaft (which moves the pistons) uses a timing belt to drive and precisely time the camshaft (which opens the valves).&nbsp;
+While the injection timing is electronically controlled by the ECU and injector
+solenoids, the pressurization of the pumpe duse injectors is mechanical and by
+the camshaft.&nbsp; The
+camshaft sprocket has an adjustment range to adjust torsion or idle
+stabilization.&nbsp; This
+adjustment can drift over the life of the timing belt on pumpe duse TDI engines
+which is a common cause of rough idling and hard start.&nbsp; In North America, pumpe duse
+engines include the 2004-2006 Golf, New Beetle, VW Jetta TDI and 2004-2005
+Passat TDI.&nbsp; It also includes the V10 Touareg TDI but it used a gear drive
+for the camshaft and not a timing belt.&nbsp; Europe also had some DOHC TDI
+engines which are slightly different.</p>
+<p>While this may fix your rough idling, a rough idle on pumpe duse engines could also be caused by worn
+camshaft lobes.&nbsp; This was a common problem on pumpe duse TDI due to their
+narrow lobes.&nbsp; See <a href="camshaft-inspection-replace-vw-tdi.htm">1000q: TDI camshaft
+inspection and replacement for PD engines</a> for details.&nbsp; It could also
+be caused by faulty and unbalanced fuel injectors.&nbsp; The procedure for
+inspecting is seen below.&nbsp; Lastly, the dual mass flywheel could be bouncing
+around and causing the rough idle.&nbsp; See <a href="../clutch-kit-FAQ-VW-Audi.htm">1000q:
+clutch FAQ</a> for more details.&nbsp; DSG automatics seem to have more
+problematic DMF.&nbsp; See <a href="../DSG-faq-VW-Audi.htm">1000q: DSG FAQ</a>
+for more details.&nbsp; General running problems could be caused by a boost leak
+so make sure there are no air leaks in the intake path.&nbsp; See <a href="boost-leak-tester-DIY-check.htm">1000q:
+boost leak check</a> for more details.</p>
+<p><img border="0" src="../../images/misc/cam/tdivalvecover.jpg" align="right" width="540" height="470" alt="vw tdi camshaft position sensor sprocket">Checking or adjusting torsion will also give the best results after doing a
+timing belt job on these engines.&nbsp; Once the timing belt is 60-80% through
+its scheduled replacement interval, check it again and adjust it as necessary.&nbsp;
+Proper timing will give the least vibration at idle and give easier
+starting.&nbsp; The camshaft pulley/hub (under the sprocket which the timing
+belt rides on) has bent tabs on the edge of the pulley.&nbsp; These tabs pass by
+the camshaft sensor and let the car's computer know exactly where the camshaft
+is.&nbsp; There's a key on the camshaft pulley which indexes its position to the
+camshaft so the relationship between the tabs and the camshaft position is
+fixed.&nbsp; Rotating the camshaft and pulley not only changes camshaft timing
+but how the car's computer sees the camshaft timing and may affect other engine
+operation such as fuel injection timing.</p>
+<p>This is not a substitute for using the special VW/Audi timing belt
+tools.&nbsp; See the timing belt articles linked below for your engine for
+details.&nbsp; The point of the camshaft pin and the hole in the toothed window
+on the camshaft sprocket is to get timing to where the engine will start fine
+and be about right, as a rough estimate, +/- 1 degrees.&nbsp; If you don't have access to a
+VCDS, just find someone later who can help you and do it when practical.</p>
+<p><b>Timing belt articles</b><br>
+<a href="../b5/2005-vw-passat-tdi-bhw-engine-timing-belt.htm">1000q: 2004-2005 Passat TDI timing belt
+part 1</a>, BHW engine<br>
+<a href="../a4/vw-jetta-tdi-timing-belt-change-replacement-bew-engine.htm">1000q: 2004-2006 Golf/New Beetle and
+2004-2005 Jetta TDI timing belt removal</a>, BEW engine<br>
+<a href="../a5/brm-VW-Jetta-TDI-timing-belt-replacement-1.htm">1000q: 2005.5-2006 VW Jetta TDI timing
+belt replacement 1</a>, BRM engine</p>
+<h3>Parts</h3>
+<p>13mm socket<br>
+torque wrench (required, see <a href="../torque-wrench-FAQ.htm">1000q:
+torque wrench FAQ</a> for a basic intro to torque wrenches)<br>
+<a href="http://ross-tech.com/" target="_blank">
+computer and VCDS software and cable</a> (required)</p>
+<h3>Procedure</h3>
+<p>Note - if you just replaced the timing belt, first do all final checks, start the engine,
+and check fluid levels before doing this procedure.</p>
+<p>If you didn't just replace the timing belt or you're ready to start, drive the car until it's
+at normal operating temperature.&nbsp; With the headlights/fan/electrical load
+off, plug the VCDS cable into the obd2 port
+and start the software.&nbsp; Click on the &quot;Engine&quot; button to enter
+the engine module.<br>
+<img border="0" src="../../images/a5/general-vcds.png" width="639" height="461"></p>
+<p>Your controller part number may vary by year/engine.&nbsp; Click on
+&quot;Meas. Blocks&quot;.<br>
+<img border="0" src="../../images/a5/tb/camshaftVWTDIPD.png" width="540" height="390"></p>
+<p>Then click &quot;Up&quot; 4 times or enter 4 to view Group 004.&nbsp; The
+number on block 4 is labeled &quot;Torsion Value&quot;.&nbsp; Higher than 0 is
+advanced timing and lower than 0 is retarded timing.&nbsp; The best value is
+about 0-0.5.&nbsp; The Passat TDI appear to like about 0-0.5.&nbsp; Jetta TDI
+appear to like .5-1.0.&nbsp; A
+little higher by 0.5 is fine because torsion tends to slightly retard as the
+belt ages.&nbsp; More advanced than 1.0 may give best results in your case and
+adjusting the torsion by +/- 1.0 won't cause any damage, so feel free to play
+with the value.<br>
+<img border="0" src="../../images/a5/tb/camshaftVWTDIPD2.png" width="540" height="387"></p>
+<p>While you're here, also check the idle stabilization through injection
+quantity (measuring block group 13).&nbsp; The car's computer can adjust the amount of fuel injected to
+stabilize idle.&nbsp; A value more than +/- 0.5 would indicate a problem.&nbsp;
+You could try filling the fuel filter with a can of diesel purge and
+running it like that to clean out the injectors.<br>
+<img border="0" src="../../images/a5/fuel_injector_balance_jetta.png" width="540" height="387"></p>
+<p>Shut off the engine and the car.&nbsp; Take care when working on the engine since
+it will be hot.&nbsp; Open the hood and remove the engine cover by pulling it
+straight up.&nbsp; It pops off with rubber ball/snap sockets.&nbsp; If you have
+a VW Passat, it's held with 3x 10mm nuts.&nbsp; You may be able to retrofit the
+snaps, see <a href="../a4/engine-cover-pop-replace.htm">1000q: snap cover
+retrofit</a> for details.</p>
+<p>If you have a Jetta, Golf, or VW New Beetle TDI, remove the intake hose right
+before the intake flap valve.&nbsp; (Does not apply to Passat).&nbsp; There are
+spring clips that hold the hose in place at each end.&nbsp; There may also be a
+T30 torx bolt or clips along the hose for the fuel line.&nbsp; Make sure the
+hose is free before removing it.<br>
+<img border="0" src="../../images/a5/tb/tb2.jpg" width="567" height="797"></p>
+<p>Remove the upper timing belt cover.&nbsp; It's held by 2 clips.<br>
+<img border="0" src="../../images/a5/tb/tb11.jpg" width="334" height="507"></p>
+<p>Loosen the 3x 13mm camshaft sprocket bolts shown below by a few turns.&nbsp; The bolts
+have oval holes on the sprocket which let the camshaft pulley (hub) rotate under
+the sprocket, within a range, without turning the timing belt.&nbsp; Do not
+remove the bolts all the way - just loosen them enough so that the pulley under
+the sprocket can rotate.</p>
+<p>Ignore the black pin and ball in the picture below, it's from another writeup.&nbsp;
+The toothed window can help you determine how far you rotate the camshaft.&nbsp;
+Also note the oval bolt holes peeking out on the sides of the 3x 13mm bolt
+heads.&nbsp; If you can't see the toothed window, use the edges of the bolt
+heads as a reference to see how far you've moved the camshaft.<br>
+<img border="0" src="../../images/a5/tb/tb14.jpg" width="638" height="520"></p>
+<p>Do not loosen the larger center 18mm bolt.&nbsp; It holds the pulley
+underneath the sprocket to the camshaft.</p>
+<p>Use a 18mm wrench on it and
+just gently tap on it to turn the camshaft a few degrees at a time.&nbsp; Too much and timing will
+move too far.&nbsp; Turning the bolt (and pulley) clockwise will advance
+timing.&nbsp; Counter clockwise will retard timing.&nbsp; Again, you're not
+loosening the center 18mm bolt, you're just using it to turn the sprocket.&nbsp;
+The timing belt will not move, just the pulley and the camshaft.</p>
+<p>If you want to use a sprocket counterhold tool like shown in the video below,
+the direction is the opposite.&nbsp; In other words, if you're moving the
+sprocket only, turning the sprocket counterclockwise will advance timing and
+clockwise will retard timing.</p>
+<p>Tighten the 3x 13mm bolts to 18 ft-lb.&nbsp; You can choose to wait until
+after you're satisfied with the final position to replace the upper timing belt
+cover.&nbsp; However, make sure that nothing or no one can get caught in the
+timing belt.&nbsp; Objects falling into the timing belt can cause belt failure
+and serious engine damage.&nbsp; If it or any other belts catch loose
+hair/clothing/etc., or you, it can cause serious injury.&nbsp; Greatly overtightening the bolts can cause bolt
+failure and serious engine damage so make sure you use a torque wrench.</p>
+<p>Replace any intake hosing that was removed.&nbsp; Make sure all tools are
+clear of the engine.&nbsp; Restart the engine and recheck camshaft torsion
+through VCDS.</p>
+<p> When satisfied,
+replace the timing belt cover and engine cover.&nbsp; Double check that any
+intake hose tabs and quick connect clips are secured.</p>
+<p>Here is a video that helps explain the procedure.&nbsp; In this example,
+timing needed to be advanced slightly after checking it to get to that 0.5 value but a tiny adjustment can
+result in a 2 degree change in timing.<br><iframe width="640" height="480" src="http://www.youtube.com/embed/pAEmqvUpKEY?rel=0" frameborder="0" allowfullscreen></iframe></p>
+<p>Feel free to sign up and ask a question about this article at the forums<a href="../../forum/index.php">:
+myturbodiesel.com forums</a></p>
+<?php include("../../footer.php"); ?>
+</html>

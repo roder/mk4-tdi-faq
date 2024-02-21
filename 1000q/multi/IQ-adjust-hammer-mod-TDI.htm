@@ -1,0 +1,197 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  "http://www.w3.org/TR/html4/loose.dtd">  
+<html xmlns:fb="http://www.facebook.com/2008/fbml"><head>
+<title>Adjusting the fuel injection quantity IQ amount in a VW or Audi TDI pump</title>
+<meta name="description" content="How to adjust fuel injection quantity on your VW TDI through VCDS and the hammer mod ">
+<meta name="keywords" content="VW Jetta TDI, injector, nozzle ,injection quantity, Bosch, adjustment, hammer mod">
+<?php include("../../header.php"); ?>
+<?php include("../../menu.php"); ?>
+
+<h1>How to adjust and test fuel IQ with VCDS
+or how to do the hammer mod</h1>
+<p><a href="difficulty_scale.htm">difficulty: 1/5</a></p>
+<p><b><font size="4">Introduction</font></b></p>
+<h2>This article shows how to test or change the fuel injection quantity on a VW
+TDI or Audi TDI engine.</h2>
+<p>Fuel injection quantity (IQ), the amount of fuel injected into the engine
+with each stroke, is adjustable in your TDI.&nbsp; This article focuses on
+1996-2003 VW TDI sold in North America or any TDI that use the electronic Bosch
+VW injection pump.&nbsp; You can use the below procedure on 2004 TDI and newer to check the IQ but you cannot change it.&nbsp; To change IQ on 2004 TDI and
+newer, you need chip tuning.&nbsp; An IQ adjustment is also not a substitute for
+chip tuning for the earlier cars.</p>
+<p>Injection quantity depends on fuel temperature, rpm, load, smoke, injection duration, coolant
+temperature, and measured air flow.&nbsp; Incorrect IQ can cause slow down
+engine shudder, rough idling, smoky running, poor starting, poor economy,
+basically anything to do with fuel.&nbsp; It's recommended to check IQ anytime after adjusting
+fuel nozzles, power chip, or if you just want to adjust the car's level of
+smoke.&nbsp; Also check the IQ if you just purchased the car
+because it is sometimes set incorrectly from the factory or previous owner.&nbsp; If you have low
+power, see the below section as well.&nbsp; Adjusting IQ can also smooth out engine shudder when engine rpms drop.</p>
+<p> Increasing fueling will increase smoke and power and
+lower fuel economy.&nbsp; Decreasing fueling will decrease smoke and power and
+raise fuel economy.&nbsp; If you just changed your nozzles to
+restore the fuel injectors, they are delivering a different amount of fuel, even if you replaced them with the same sized nozzles.&nbsp; For
+example, when you put &quot;.184&quot; sized nozzles on the original fuel
+injectors, your original nozzles may actually be .170mm instead of your new
+.184mm nozzles.</p>
+<p>The slight adjustment in fuel economy is not just because of less smoke/wasted fuel but
+also slightly changes how the car responds to the accelerator pedal.&nbsp; Driving from
+point a to b requires a minimum amount of energy/fuel.&nbsp; Faster than optimum
+(for fuel economy) acceleration means you use more energy/fuel than the
+minimum.&nbsp; Decreasing fueling through a change in IQ produces a similar result as decreasing how far and fast you press down on the accelerator
+pedal.&nbsp; Since most drivers use more acceleration than needed for
+maximum fuel economy, decreasing IQ <i> could be</i> like giving the
+driver greater foot control for maximum fuel economy.&nbsp;
+This is not a recommendation to put the IQ out of its normal range on a stock,
+unmodified car!&nbsp; The accelerator pedal in all TDI is drive by
+wire, meaning there's no cable connected to a mechanical throttle.&nbsp; At the
+base of the pedal is an electronic potentiometer which sends a signal to the
+car's computer.&nbsp; Changing IQ does not affect the accelerator pedal signal.</p>
+<p>How much could fuel economy or power increase?&nbsp; The difference is small and there are too many variations between drivers,
+driving styles, and cars to say it will even result in a noticeable change.&nbsp; Since this test will not hurt your car in
+any way, try adjusting IQ within the normal range, drive the car for a while, then see how you like it.</p>
+<p>There are two ways to adjust IQ - through software adaptation using a VCDS
+ross tech cable or mechanically.&nbsp; Sometimes the injection pump is set
+incorrectly from the factory and requires a mechanical adjustment.&nbsp; If you reach the limit of how far you can
+adjust IQ through software adaptation then you have to adjust IQ
+mechanically.&nbsp; Inside the fuel pump's quantity adjuster
+(QA), there is an electronically operated arm that moves back and forth to
+adjust the IQ.&nbsp; If the software is telling the arm to move all the way to
+one side but it's at its limits, adjust the physical range of movement.</p>
+<p><b>Rules for adjusting IQ and the QA's reaction<br>
+</b>The normal range for IQ value on a stock, unmodified car is 3-5 mg/str at
+idle and 36-38 at full throttle.&nbsp; Too low and the car is overfueling, too
+high and the car is underfueling.<br>
+If you want less fuel you want a higher IQ value, lower software adaptation
+number, QA moves left towards fuel filter (passenger side for left hand drive
+cars).<br>
+If you want more fuel you want a lower IQ value, higher software adaptation
+number, QA moves right towards battery (driver's side for left hand drive cars).</p>
+<p><b>Related links</b><br>
+<a href="low-power-fix-TDI.htm">1000q: constant low power or can't rev</a> , <a href="limp-mode-TDI-fix.htm">1000q:
+limp mode diagnosis</a></p>
+<hr>
+<p><b><font size="4">Tools/parts&nbsp;
+</font></b><br>
+1 <a href="http://ross-tech.com/" target="_blank"> Rosstech VCDS cable</a>&nbsp;(cable is required)&nbsp;&nbsp;<br>
+<b>Which cable do you need?</b>&nbsp; Since injection quantity on pumpe duse TDI
+is not adjustable through VCDS, this page does not apply to them and their
+hex-can cables.&nbsp; Hex-can cables are for CAN BUS cars but will also work on
+your car.</p>
+<p>  If this page applies to you, I suggest the key-com or KII cable.&nbsp; The
+  key-com is an older design and will work equally fine, available through <a href="http://www.kermatdi.com/servlet/-strse-190/VAGcom-VAG-com-VAG-dsh-com/Detail?category=Diagnostics%2C+Tools%2C+and+Manuals">kermatdi</a>,&nbsp;<a href="http://www.ross-tech.com/Merchant2/merchant.mvc?Screen=PROD&amp;Product_Code=VCKC0&amp;Category_Code=VAGCOM">rosstech</a>
+  .&nbsp; The KII is the newer design cable and will work equally fine, available
+  from  <a href="http://www.ross-tech.com/Merchant2/merchant.mvc?Screen=PROD&amp;Product_Code=VCKII&amp;Category_Code=VAGCOM">rosstech</a></p>
+<p>If you need to make a mechanical adjustment:<br>
+T-30 torx bit<br>
+triangle security socket (triangular injection pump socket) Bosch PN#
+&quot;0-986-612-605&quot; from <a href="http://www.metalnerd.com/cat05.htm">Metalnerd</a>OR <a href="http://www.kermatdi.com/servlet/-strse-14/ALH-Metalnerd-Injection-Pump/Detail">KermaTDI</a>
+(these are cheaper and just as good as the Bosch part)<br>
+hammer and a piece of wood<br>
+-<a href="http://www.dieselgeek.com/TDI_injection_pump_seal_kit_p/pmp-fullkit.htm" target="_blank">TDI pump seal kit</a> If your injection pump seals have not been changed yet it's possible moving the  will break the seal if the seal is original or very old. If your pump does start leaking at the lower quantity adjuster union after the hammer mod you will need to follow the procedure here to index the pump's quantity adjuster before removing it and replacing the  seal.<br>
+</p>
+<hr>
+
+<h3>Procedure</h3>
+<h4>Testing and changing IQ with software adaptation</h4>
+<p>Drive the car and let it warm up to normal operating temperature.&nbsp; While
+idling, plug in the VCDS cable and start the software.</p>
+<p>Click on &quot;Engine&quot; and you'll see the screen below (the controller
+info numbers may be different).&nbsp; Click on &quot;login&quot; in the screen
+below.&nbsp; Login using the code
+&quot;12233&quot; and hit enter.&nbsp; Go back to the last screen and Click on &quot;adaptation&quot;.&nbsp;
+Select block 1.<br>
+<img border="0" src="../../images/misc/IQadjust1.jpg" width="630" height="449"></p>
+<p>Block 1 should show the IQ.&nbsp; The IQ value is normally about &quot;3.0-5.0
+mg/str&quot;.&nbsp;
+If the IQ is bouncing around as much as 1 to 6 then the engine isn't warmed up
+or there's either an injection pump internal fault or ECU fault.&nbsp; The default adaptation
+number, whether you have a chip or not, is 32768.&nbsp; A lower adaptation
+number entered in the blank will reduce fueling and increase
+the &quot;x.x&quot; m/R value.&nbsp; A higher adaptation number entered will
+increase fueling and lower the &quot;x.x&quot; mg/R value.&nbsp;&nbsp;</p>
+<p>Hit &quot;test&quot; after entering your adaptation number and the IQ, the &quot;x.x&quot;
+mg/str value
+will change.&nbsp; There is a mechanical limit to how high or low
+you can change the adaptation number since it's just software.&nbsp; If you
+reach the limit the software won't let you click on &quot;save&quot;.&nbsp;
+Click up or down to change the adaptation number until you see where the limit
+is.&nbsp; If you can't get to the desired IQ then you need to do the hammer mod
+to mechanically change the QA's range of movement, see below for details.</p>
+<p>Again:<br>
+If you want less fuel you want a higher IQ value, lower software adaptation
+number, QA moves left towards fuel filter (passenger side for north american
+cars).<br>
+If you want more fuel you want a lower IQ value, higher software adaptation
+number, QA moves right towards battery (driver's side for north american
+cars).</p>
+<p>Hit &quot;save&quot; when you are satisfied.&nbsp; When you're done, go back
+and make sure the values you wanted are still there because if you
+forget to hit save there's no change.&nbsp; Go for a test drive.&nbsp; After
+adjusting the IQ you should notice a difference in throttle response, power, and
+smoke.&nbsp; As long as the car has enough drivable power, I prefer a setting on
+the high side because this will help reduce smoke (unburned fuel).&nbsp; I would
+not adjust IQ much higher than about 5.5 at idle since power starts to
+noticeably drop off.&nbsp;&nbsp;</p>
+<hr>
+<h4>Testing the IQ and checking for correct IQ range</h4>
+<p>If you're having low power issues the problem could be a bad QA or a QA out
+of adjustment.&nbsp; Sometimes the QA is bolted on incorrectly at the factory or
+a previous owner replaced the seal underneath the QA and didn't adjust it
+correctly.</p>
+<p>Drive the car and let it warm up to normal operating temperature.&nbsp; While
+idling, plug in the VCDS cable.&nbsp; Click on &quot; engine&quot; - you should
+see the screen in the above picture.&nbsp; Click on &quot;Meas.
+Blocks&quot;.&nbsp; Go to Group 15 or click on &quot;up&quot; 15 times.&nbsp;
+You should see the below screen.<br>
+<img border="0" src="../../images/misc/IQadjust2.png" width="634" height="454"></p>
+<p>Inj Qty (actual) at idle is normally 3-5 mg/str.&nbsp; Full throttle
+(pictured above) is about
+34-36 mg/str.&nbsp; At idle, Inj Qty requested (accelerator) can be 0 because
+you're not touching the accelerator pedal.&nbsp; If the IQ is bouncing around as
+much as 1 to 6 then the engine isn't warmed up or there's either an injection
+pump internal fault or ECU fault.</p>
+<p>Go for a test drive, making sure your helper operates the computer - you
+don't want to get distracted and crash the car!&nbsp; The Inj Qty actual and
+requested should stay close together as you drive.&nbsp; If they aren't, you are
+having a fueling problem that the computer is aware of.&nbsp; It's not the
+accelerator pedal since that should trip an error code.&nbsp; It could be an
+internal injection pump failure, bad ECU, bad QA, sticking fuel shut off
+solenoid, or <a href="TDI-nozzle-FAQ.htm">bad fuel injectors/nozzles</a>.</p>
+<hr>
+<h4>Hammer mod to mechanically change QA's range of movement</h4>
+<p>If you have reached the limit of software adjustment to change the IQ, you
+need to change the QA's mechanical range of movement.&nbsp; This lets the
+electronic arm inside the pump move farther.&nbsp;&nbsp;</p>
+<p>Reset the IQ through
+VCDS to the default factory value.&nbsp; This way you change only one thing at a
+time.&nbsp; Note the IQ value.&nbsp; Again:<br>
+If you want less fuel you want a higher IQ value, lower software adaptation
+number, QA moves left towards fuel filter (passenger side for north american
+cars).<br>
+If you want more fuel you want a lower IQ value, higher software adaptation
+number, QA moves right towards battery (driver's side for north american
+cars).</p>
+<p>Drive the car and let it warm up to normal operating temperature.&nbsp; Shut
+off the engine.&nbsp; Remove the engine cover (3x 10mm nuts). </p>
+<p>Loosen the 3x T-30 torx bolts and the 1 triangle Bosch security bolt circled
+below.&nbsp; Use Bosch PN#
+&quot;0-986-612-605&quot; or the equivalent tools to loosen the security
+bolt.&nbsp; Only loosen them hand tight, enough to slide the QA left
+or right without having a fuel leak.&nbsp; You do not remove the QA - only
+loosen it so that it can slide left or right to adjust the arm inside. <br>
+<img border="0" src="../../images/misc/IQadjust3.jpg" width="1016" height="663"></p>
+<p>First, use a pad like a block of wood or use a rubber or deadblow mallet to
+prevent damage to the metal.&nbsp; Tap on the middle section of the
+injection pump, the QA, left or right to slide it and change the IQ.&nbsp; It's safe to
+gently tap on the
+areas highlighted in green above.&nbsp; This can be done with the engine running
+to see the change in real time.&nbsp; Once it's around 4 (3-5 is acceptable), recheck that the
+bolts are tight and
+recheck the IQ.&nbsp; You can now fine tune it using the VCDS software using the
+above steps.</p>
+<p>Below is a video showing how hard to tap the pump.&nbsp; If it's not moving,
+loosen the bolts a tiny bit more.&nbsp; If you have any more questions, feel free to ask in the
+forums linked at the top or search the site:<br><iframe width="480" height="360" src="http://www.youtube.com/embed/a9kfXQyO_NQ?rel=0" frameborder="0" allowfullscreen></iframe></p>
+
+<?php include("../../footer.php"); ?>
+</html>
